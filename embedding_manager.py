@@ -1,16 +1,26 @@
+import os
 from llama_index.core import Settings, VectorStoreIndex, StorageContext
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.vector_stores.chroma import ChromaVectorStore
 import chromadb
 from pathlib import Path
+import dotenv
+dotenv.load_dotenv()
+import tiktoken
+from llama_index.core.callbacks import CallbackManager, TokenCountingHandler, LlamaDebugHandler
 
 class EmbeddingManager:
     def __init__(self, persist_dir="./chroma_db", collection_name="video_transcripts"):
         """Initialize embedding manager with ChromaDB persistence"""
         
-        # Initialize embedding model
-        Settings.embed_model = HuggingFaceEmbedding(
-            model_name="intfloat/e5-large-v2"
+        # Set OpenAI API key from environment variable
+        openai_api_key = os.environ.get("OPENAI_API_KEY")
+        if not openai_api_key:
+            raise ValueError("OPENAI_API_KEY environment variable not set. Please set it to your OpenAI API key.")
+        
+        # Initialize embedding model with OpenAI
+        Settings.embed_model = OpenAIEmbedding(
+            model="text-embedding-3-large"
         )
         Settings.llm = None
         
@@ -35,21 +45,35 @@ class EmbeddingManager:
         # Setup vector store
         self.vector_store = ChromaVectorStore(chroma_collection=self.collection)
         self.storage_context = StorageContext.from_defaults(vector_store=self.vector_store)
+        
+        # Setup token counting and debug handlers
+        self.token_counter = TokenCountingHandler(
+            tokenizer=tiktoken.encoding_for_model("text-embedding-3-large").encode,
+            verbose=True
+        )
+        self.debug_handler = LlamaDebugHandler(print_trace_on_end=True)
+        self.callback_manager = CallbackManager([self.token_counter, self.debug_handler])
     
     def create_index(self, documents):
-        """Create vector index from documents"""
+        """Create vector index from documents and log token usage and timing"""
+        import time
         if not documents:
             print("No documents provided for indexing")
             return None
             
         print(f"Creating index with {len(documents)} documents...")
         try:
+            start_time = time.time()
             index = VectorStoreIndex.from_documents(
                 documents,
                 storage_context=self.storage_context,
-                show_progress=True
+                show_progress=True,
+                callback_manager=self.callback_manager
             )
+            elapsed = time.time() - start_time
             print("Index created successfully!")
+            print(f"Index creation time: {elapsed:.2f} seconds")
+            print(f"Embedding Tokens Used: {self.token_counter.total_embedding_token_count}")
             return index
         except Exception as e:
             print(f"Error creating index: {e}")
@@ -68,15 +92,20 @@ class EmbeddingManager:
             return None
     
     def add_documents_to_index(self, index, new_documents):
-        """Add new documents to existing index"""
+        """Add new documents to existing index and log token usage and timing"""
+        import time
         if not new_documents:
             print("No new documents to add")
             return index
             
         try:
+            start_time = time.time()
             for doc in new_documents:
-                index.insert(doc)
+                index.insert(doc, callback_manager=self.callback_manager)
+            elapsed = time.time() - start_time
             print(f"Added {len(new_documents)} new documents to index")
+            print(f"Addition time: {elapsed:.2f} seconds")
+            print(f"Embedding Tokens Used: {self.token_counter.total_embedding_token_count}")
             return index
         except Exception as e:
             print(f"Error adding documents to index: {e}")

@@ -1,0 +1,12 @@
+__pycache__
+Archive
+audio
+chroma_db
+Data
+transcripts
+videosem
+.env
+.DS_Store
+
+
+
