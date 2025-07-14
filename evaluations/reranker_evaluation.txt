@@ -1,0 +1,182 @@
+You're using a XLMRobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+🔧 Initializing unified embedding manager...
+LLM is explicitly disabled. Using MockLLM.
+Loaded existing collection: video_transcripts
+📊 Index loaded with 1134 documents
+Loaded existing index successfully!
+✅ Basic search engine ready!
+Loading BGE reranker...
+✅ BGE reranker loaded successfully
+✅ Reranker search engine ready!
+
+🧪 STARTING COMPREHENSIVE EVALUATION OF 20 TEST CASES
+====================================================================================================
+
+🧪 TEST CASE 1/20
+================================================================================
+📝 PROMPT: How to earn your status?
+📋 EXPECTED: It's Never Been Easier To Make Money - Naval Ravikant
+
+🔍 BASIC SEARCH:
+--------------------------------------------------
+1. “It’s Never Been Easier To Make Money” - Naval Ravikant | 0.280
+2. “It’s Never Been Easier To Make Money” - Naval Ravikant | 0.271
+3. “It’s Never Been Easier To Make Money” - Naval Ravikant | 0.266
+⏱️  Time: 1.04s
+
+🎯 RERANKED SEARCH:
+--------------------------------------------------
+1. “It’s Never Been Easier To Make Money” - Naval Ravikant | 0.280 | R:-0.269
+2. “It’s Never Been Easier To Make Money” - Naval Ravikant | 0.247 | R:-3.035
+3. “It’s Never Been Easier To Make Money” - Naval Ravikant | 0.235 | R:-5.016
+⏱️  Time: 4.46s
+
+📊 METRICS COMPARISON:
+   Basic  - Hit: ❌ | P@5: 0.000 | MRR: 0.000
+   Rerank - Hit: ❌ | P@5: 0.000 | MRR: 0.000
+
+🧪 TEST CASE 2/20
+================================================================================
+📝 PROMPT: How to build applications better
+📋 EXPECTED: AI
+
+🔍 BASIC SEARCH:
+--------------------------------------------------
+1. AI | 0.292
+2. api | 0.276
+3. AI | 0.269
+⏱️  Time: 0.56s
+
+🎯 RERANKED SEARCH:
+--------------------------------------------------
+1. AI | 0.269 | R:3.633
+2. api | 0.276 | R:-1.602
+3. AI | 0.292 | R:-2.234
+⏱️  Time: 1.59s
+
+📊 METRICS COMPARISON:
+   Basic  - Hit: ✅ | P@5: 0.400 | MRR: 1.000
+   Rerank - Hit: ✅ | P@5: 0.800 | MRR: 1.000
+
+🧪 TEST CASE 3/20
+================================================================================
+📝 PROMPT: What is instruction tuning?
+📋 EXPECTED: Colbert
+
+🔍 BASIC SEARCH:
+--------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/evaluation_reranker.py", line 434, in <module>
+    run_comprehensive_evaluation() 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/evaluation_reranker.py", line 289, in run_comprehensive_evaluation
+    basic_results = search_engine_basic.search(prompt, top_k=5)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/search_engine.py", line 38, in search
+    nodes = retriever.retrieve(query_bundle)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/llama_index_instrumentation/dispatcher.py", line 319, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/llama_index/core/base/base_retriever.py", line 246, in retrieve
+    nodes = self._retrieve(query_bundle)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/llama_index_instrumentation/dispatcher.py", line 319, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/llama_index/core/indices/vector_store/retrievers/retriever.py", line 100, in _retrieve
+    self._embed_model.get_agg_embedding_from_queries(
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/llama_index/core/base/embeddings/base.py", line 227, in get_agg_embedding_from_queries
+    query_embeddings = [self.get_query_embedding(query) for query in queries]
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/llama_index_instrumentation/dispatcher.py", line 319, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/llama_index/core/base/embeddings/base.py", line 148, in get_query_embedding
+    query_embedding = self._get_query_embedding(query)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/llama_index_instrumentation/dispatcher.py", line 319, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/llama_index/embeddings/openai/base.py", line 396, in _get_query_embedding
+    return _retryable_get_embedding()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/tenacity/__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/llama_index/embeddings/openai/base.py", line 389, in _retryable_get_embedding
+    return get_embedding(
+           ^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/llama_index/embeddings/openai/base.py", line 128, in get_embedding
+    client.embeddings.create(input=[text], model=engine, **kwargs).data[0].embedding
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/openai/resources/embeddings.py", line 132, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/openai/_base_client.py", line 1249, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/openai/_base_client.py", line 972, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhsingh/Desktop/Internship/Task-2/Manual_Build/videosem/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 128, in read
+    return self._sock.recv(max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/ssl.py", line 1233, in recv
+    return self.read(buflen)
+           ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/ssl.py", line 1106, in read
+    return self._sslobj.read(len)
+           ^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

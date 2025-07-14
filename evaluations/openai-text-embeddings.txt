@@ -1,0 +1,1661 @@
+🔧 Initializing search engines...
+LLM is explicitly disabled. Using MockLLM.
+Loaded existing collection: video_transcripts
+Loaded existing index successfully!
+Loaded existing index successfully!
+✅ Basic search engine ready!
+Loading BGE reranker...
+✅ BGE reranker loaded successfully
+✅ Reranker search engine ready!
+
+🧪 TEST CASE 1/20
+================================================================================
+📝 PROMPT: How to earn your status?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "It's Never Been Easier To Make Money - Naval Ravikant",
+    "text": "But even back then, you had to earn your status by taking care of the tribe.",
+    "start": 29.17,
+    "end": 32.77
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 00:29 - 00:32
+   Text: But even back then, you had to earn your status by taking care of the tribe.
+   Score: 0.280
+----------------------------------------
+
+2. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 00:59 - 01:01
+   Text: And so it's a rise in status.
+   Score: 0.271
+----------------------------------------
+
+3. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 00:00 - 00:04
+   Text: How should people learn to get less distracted by status games in that way?
+   Score: 0.266
+----------------------------------------
+
+4. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 00:24 - 00:29
+   Text: If you were high status, then you got what little was available first.
+   Score: 0.258
+----------------------------------------
+
+5. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 03:15 - 03:26
+   Text: Given that most people use status to then try and cash in to achieve wealth, if you've achieved fuck you money already, if you're post money or, asset heavy, as it's known, why are you trying to go in the other direction?
+   Score: 0.258
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 00:29 - 00:32
+   Text: But even back then, you had to earn your status by taking care of the tribe.
+   Similarity Score: 0.280
+   Rerank Score: -0.269
+----------------------------------------
+
+2. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 01:58 - 01:59
+   Text: They want status.
+   Similarity Score: 0.247
+   Rerank Score: -3.035
+----------------------------------------
+
+3. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 01:02 - 01:14
+   Text: Now you can have multiple kinds of status, so you can expand some kinds of status, but it's not like wealth creation where it can go infinitely, where we can all be, you know, living in the stars and moon bases or Mars colonies or what have you.
+   Similarity Score: 0.244
+   Rerank Score: -5.789
+----------------------------------------
+
+4. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 02:03 - 02:08
+   Text: They go to Cairns or Davos or what have you, and they start trying to trade the money for status.
+   Similarity Score: 0.253
+   Rerank Score: -5.836
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 2/20
+================================================================================
+📝 PROMPT: How to build applications better
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "AI",
+    "text": "I basically dedicated my professional life towards getting developers to be able to build better applications and build applications better by leveraging not just individual data points, kind of retrieved at once, like one at a time, or summed up or group calculated averages, but individual data points connected by relationships.",
+    "start": 13.28,
+    "end": 37.010002
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 12:46 - 12:58
+   Text: One is not better than the other, except I will make one statement, which is when you sit down and you write your application, when you build your application, I'm actually gonna make the statement that one of them is superior.
+   Score: 0.292
+----------------------------------------
+
+2. Video: api
+   Time: 08:03 - 08:05
+   Text: And that is how you build a simple app.
+   Score: 0.276
+----------------------------------------
+
+3. Video: AI
+   Time: 00:13 - 00:37
+   Text: I basically dedicated my professional life towards getting developers to be able to build better applications and build applications better by leveraging not just individual data points, kind of retrieved at once, like one at a time, or summed up or group calculated averages, but individual data points connected by relationships.
+   Score: 0.269
+----------------------------------------
+
+4. Video: api
+   Time: 20:27 - 20:37
+   Text: So your job isn't to think harder, it's to think as a connector, like how can I connect different tools together to make a beautiful piece of software, right?
+   Score: 0.255
+----------------------------------------
+
+5. Video: api
+   Time: 13:45 - 13:47
+   Text: So make sure that you are building what you can.
+   Score: 0.251
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 00:13 - 00:37
+   Text: I basically dedicated my professional life towards getting developers to be able to build better applications and build applications better by leveraging not just individual data points, kind of retrieved at once, like one at a time, or summed up or group calculated averages, but individual data points connected by relationships.
+   Similarity Score: 0.269
+   Rerank Score: 3.633
+----------------------------------------
+
+2. Video: api
+   Time: 08:03 - 08:05
+   Text: And that is how you build a simple app.
+   Similarity Score: 0.276
+   Rerank Score: -1.602
+----------------------------------------
+
+3. Video: AI
+   Time: 12:46 - 12:58
+   Text: One is not better than the other, except I will make one statement, which is when you sit down and you write your application, when you build your application, I'm actually gonna make the statement that one of them is superior.
+   Similarity Score: 0.292
+   Rerank Score: -2.234
+----------------------------------------
+
+4. Video: AI
+   Time: 10:26 - 10:34
+   Text: Because what we hear very clearly from our user is that it's easier to build rag applications with graph rag compared to baseline rag.
+   Similarity Score: 0.239
+   Rerank Score: -3.732
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 3/20
+================================================================================
+📝 PROMPT: What is instruction tuning?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Colbert",
+    "text": "Instruction tuning is a technique that allows pretrained language models to learn from input and response pairs.",
+    "start": 747.255,
+    "end": 752.935
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Colbert
+   Time: 08:18 - 08:21
+   Text: So our question was, what is instruction tuning?
+   Score: 0.463
+----------------------------------------
+
+2. Video: Colbert
+   Time: 12:27 - 12:32
+   Text: Instruction tuning is a technique that allows pretrained language models to learn from input and response pairs.
+   Score: 0.387
+----------------------------------------
+
+3. Video: Colbert
+   Time: 08:22 - 08:32
+   Text: And the response is instruction tuning is a technique that allows pretrained language models to learn from input natural language description of task and response pairs, right?
+   Score: 0.376
+----------------------------------------
+
+4. Video: Colbert
+   Time: 04:22 - 04:28
+   Text: So I'm asking what is instruction tuning, and then how many chunks I want the model to retrieve.
+   Score: 0.344
+----------------------------------------
+
+5. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 07:09 - 07:15
+   Text: And the reason is I'm trying to make it customized to our specific application.
+   Score: 0.224
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Colbert
+   Time: 08:18 - 08:21
+   Text: So our question was, what is instruction tuning?
+   Similarity Score: 0.463
+   Rerank Score: 9.273
+----------------------------------------
+
+2. Video: Colbert
+   Time: 12:27 - 12:32
+   Text: Instruction tuning is a technique that allows pretrained language models to learn from input and response pairs.
+   Similarity Score: 0.387
+   Rerank Score: 9.258
+----------------------------------------
+
+3. Video: Colbert
+   Time: 08:22 - 08:32
+   Text: And the response is instruction tuning is a technique that allows pretrained language models to learn from input natural language description of task and response pairs, right?
+   Similarity Score: 0.376
+   Rerank Score: 6.551
+----------------------------------------
+
+4. Video: Colbert
+   Time: 04:22 - 04:28
+   Text: So I'm asking what is instruction tuning, and then how many chunks I want the model to retrieve.
+   Similarity Score: 0.344
+   Rerank Score: 0.948
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 4/20
+================================================================================
+📝 PROMPT: What is contextual retrieval?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Contextual Retrieval with Any LLM_ A Step-by-Step Guide",
+    "text": "In a previous video, we looked at contextual retrieval, which is a new chunking strategy from Anthropic, which has shown to improve the failure rates by thirty five percent in contextual embeddings, and when combined with PM25, the failure rate can be reduced by forty nine percent.",
+    "start": 0.0,
+    "end": 18.265
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 10:02 - 10:04
+   Text: So CR is the contextual retrieval.
+   Score: 0.364
+----------------------------------------
+
+2. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 01:15 - 01:40
+   Text: The contextual retrieval system adds a pre processing step in which we take each chunk, feed that into a specific prompt, which also looks at the whole document, and then that prompt identify or locate that chunk in the whole document and add contextual information related to that specific chunk.
+   Score: 0.358
+----------------------------------------
+
+3. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 00:00 - 00:18
+   Text: In a previous video, we looked at contextual retrieval, which is a new chunking strategy from Anthropic, which has shown to improve the failure rates by thirty five percent in contextual embeddings, and when combined with PM25, the failure rate can be reduced by forty nine percent.
+   Score: 0.331
+----------------------------------------
+
+4. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 07:15 - 07:26
+   Text: So if you're working on a very specific application or specific types of documents, you want to customize this contextualizing prompt to that specific set of documents.
+   Score: 0.329
+----------------------------------------
+
+5. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 12:23 - 12:36
+   Text: And the way we do it is that we're doing a retrieval on the original vector store, contextualized vector store, and then the BM 25 index created on the original contextualized chunks.
+   Score: 0.327
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 01:15 - 01:40
+   Text: The contextual retrieval system adds a pre processing step in which we take each chunk, feed that into a specific prompt, which also looks at the whole document, and then that prompt identify or locate that chunk in the whole document and add contextual information related to that specific chunk.
+   Similarity Score: 0.358
+   Rerank Score: 5.188
+----------------------------------------
+
+2. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 00:00 - 00:18
+   Text: In a previous video, we looked at contextual retrieval, which is a new chunking strategy from Anthropic, which has shown to improve the failure rates by thirty five percent in contextual embeddings, and when combined with PM25, the failure rate can be reduced by forty nine percent.
+   Similarity Score: 0.331
+   Rerank Score: 4.988
+----------------------------------------
+
+3. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 10:02 - 10:04
+   Text: So CR is the contextual retrieval.
+   Similarity Score: 0.364
+   Rerank Score: 2.549
+----------------------------------------
+
+4. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 04:48 - 04:53
+   Text: Now here we created a contextual retrieval class for chunk creation.
+   Similarity Score: 0.323
+   Rerank Score: -0.800
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 5/20
+================================================================================
+📝 PROMPT: What is API arbitrage?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "api",
+    "text": "Now, the ability to see gaps and a sort of arbitrage between what an API or other people's code enables you to and what customers need, this is the art of API arbitrage and it's the closest thing we have to magic in 2025, right?",
+    "start": 46.3,
+    "end": 62.3
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: api
+   Time: 00:46 - 01:01
+   Text: Now, the ability to see gaps and a sort of arbitrage between what an API or other people's code enables you to and what customers need, this is the art of API arbitrage and it's the closest thing we have to magic in 2025, right?
+   Score: 0.436
+----------------------------------------
+
+2. Video: api
+   Time: 15:31 - 15:40
+   Text: How this works is margin erosion again, is that as APIs get cheaper, competitors undercut you and things like that, you've got to differentiate through context, right?
+   Score: 0.317
+----------------------------------------
+
+3. Video: api
+   Time: 01:30 - 01:37
+   Text: So an API is this agreement to trade pieces to make an end result or an end product that works.
+   Score: 0.316
+----------------------------------------
+
+4. Video: api
+   Time: 06:28 - 06:32
+   Text: The real profit lies in asymmetrical pricing, right?
+   Score: 0.308
+----------------------------------------
+
+5. Video: api
+   Time: 13:05 - 13:14
+   Text: So platforms like Apify and RapidAPI, which are just these giant marketplaces for APIs, they're they're amazing, and they've built millionaires.
+   Score: 0.305
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: api
+   Time: 00:46 - 01:01
+   Text: Now, the ability to see gaps and a sort of arbitrage between what an API or other people's code enables you to and what customers need, this is the art of API arbitrage and it's the closest thing we have to magic in 2025, right?
+   Similarity Score: 0.436
+   Rerank Score: 0.789
+----------------------------------------
+
+2. Video: api
+   Time: 01:30 - 01:37
+   Text: So an API is this agreement to trade pieces to make an end result or an end product that works.
+   Similarity Score: 0.316
+   Rerank Score: -3.438
+----------------------------------------
+
+3. Video: api
+   Time: 03:57 - 04:02
+   Text: Now remember, an API is just you paying to access code that you couldn't build yourself.
+   Similarity Score: 0.271
+   Rerank Score: -6.535
+----------------------------------------
+
+4. Video: api
+   Time: 13:02 - 13:04
+   Text: The API Goldrush and its traps.
+   Similarity Score: 0.283
+   Rerank Score: -6.680
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 6/20
+================================================================================
+📝 PROMPT: How to do better RAG?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Colbert",
+    "text": "Welcome to another video on how to do better rag.",
+    "start": 0.6,
+    "end": 3.5
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 04:54 - 05:04
+   Text: What I'm gonna talk to you about today is how can you use well, first of all, should you and if so, how can you use GraphRAG for your own Rag based applications?
+   Score: 0.338
+----------------------------------------
+
+2. Video: AI
+   Time: 08:27 - 08:30
+   Text: So if that's what GraphRAG is, what are the benefits of GraphRAG?
+   Score: 0.327
+----------------------------------------
+
+3. Video: AI
+   Time: 05:06 - 05:07
+   Text: So what is GraphRAG?
+   Score: 0.315
+----------------------------------------
+
+4. Video: AI
+   Time: 10:02 - 10:13
+   Text: Graph RAG enables us to answer another important class of questions that we couldn't even do with vector search alone or baseline vector searches with or baseline RAG alone.
+   Score: 0.312
+----------------------------------------
+
+5. Video: AI
+   Time: 05:10 - 05:16
+   Text: GraphRAG is RAG where on the retrieval path, you use a knowledge graph.
+   Score: 0.308
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Colbert
+   Time: 00:00 - 00:03
+   Text: Welcome to another video on how to do better rag.
+   Similarity Score: 0.306
+   Rerank Score: 0.896
+----------------------------------------
+
+2. Video: AI
+   Time: 10:02 - 10:13
+   Text: Graph RAG enables us to answer another important class of questions that we couldn't even do with vector search alone or baseline vector searches with or baseline RAG alone.
+   Similarity Score: 0.309
+   Rerank Score: -4.555
+----------------------------------------
+
+3. Video: AI
+   Time: 14:17 - 14:19
+   Text: So how do you get started with with Graph Rack?
+   Similarity Score: 0.255
+   Rerank Score: -4.781
+----------------------------------------
+
+4. Video: AI
+   Time: 04:54 - 05:04
+   Text: What I'm gonna talk to you about today is how can you use well, first of all, should you and if so, how can you use GraphRAG for your own Rag based applications?
+   Similarity Score: 0.336
+   Rerank Score: -4.809
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 7/20
+================================================================================
+📝 PROMPT: What is the LEGO philosophy for APIs?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "api",
+    "text": "So in API, imagine you're at a party where everyone brings half built LEGO sets.",
+    "start": 74.7,
+    "end": 82.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: api
+   Time: 01:02 - 01:03
+   Text: So the LEGO philosophy.
+   Score: 0.417
+----------------------------------------
+
+2. Video: api
+   Time: 22:00 - 22:04
+   Text: So today, the best toys are borrowed Legos, right?
+   Score: 0.298
+----------------------------------------
+
+3. Video: api
+   Time: 01:14 - 01:20
+   Text: So in API, imagine you're at a party where everyone brings half built LEGO sets.
+   Score: 0.296
+----------------------------------------
+
+4. Video: api
+   Time: 20:21 - 20:27
+   Text: The future belongs to founders who see APIs as the sort of brain to hijack.
+   Score: 0.280
+----------------------------------------
+
+5. Video: api
+   Time: 07:13 - 07:21
+   Text: So the most profitable founders I know, they treat APIs and accessing other people's code like attacks on progress, right?
+   Score: 0.273
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: api
+   Time: 01:02 - 01:03
+   Text: So the LEGO philosophy.
+   Similarity Score: 0.417
+   Rerank Score: 2.373
+----------------------------------------
+
+2. Video: api
+   Time: 01:14 - 01:20
+   Text: So in API, imagine you're at a party where everyone brings half built LEGO sets.
+   Similarity Score: 0.296
+   Rerank Score: -3.932
+----------------------------------------
+
+3. Video: api
+   Time: 01:30 - 01:37
+   Text: So an API is this agreement to trade pieces to make an end result or an end product that works.
+   Similarity Score: 0.265
+   Rerank Score: -6.035
+----------------------------------------
+
+4. Video: api
+   Time: 20:21 - 20:27
+   Text: The future belongs to founders who see APIs as the sort of brain to hijack.
+   Similarity Score: 0.280
+   Rerank Score: -7.098
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 8/20
+================================================================================
+📝 PROMPT: How to get YouTube views?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "How I Get Over 100,000,000 Views Per Video",
+    "text": "In this video, I'm gonna be showing you how you can get access to all my YouTube secrets. Everything I use to get over a 100,000,000 views a video.",
+    "start": 0.0,
+    "end": 4.2
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 02:22 - 02:27
+   Text: And once you install it, whenever you're watching YouTube, you'll have this view stats overlay to the right of the video.
+   Score: 0.377
+----------------------------------------
+
+2. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 05:19 - 05:24
+   Text: You upload a couple thumbnail options, YouTube tests them all out, and it tells you which one's the best.
+   Score: 0.372
+----------------------------------------
+
+3. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:46 - 01:50
+   Text: Basically, if you go up to the top of view stats, you can hit top subscribers.
+   Score: 0.369
+----------------------------------------
+
+4. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 02:13 - 02:22
+   Text: We also have a ViewStats Chrome extension that if you go to the Chrome store and type in ViewStats, all you have to do is hit add to Chrome, just like any other extension, hit add extension.
+   Score: 0.361
+----------------------------------------
+
+5. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:59 - 05:06
+   Text: And if you're ever on YouTube and you see a thumbnail you like, you can just copy the URL to the video and paste it there and search with that thumbnail as well.
+   Score: 0.360
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 02:22 - 02:27
+   Text: And once you install it, whenever you're watching YouTube, you'll have this view stats overlay to the right of the video.
+   Similarity Score: 0.377
+   Rerank Score: -2.844
+----------------------------------------
+
+2. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:10 - 01:17
+   Text: So without view stats, if you wanted to see out of 10 how well a video performed on a channel, you couldn't unless you had access to their creator studio.
+   Similarity Score: 0.343
+   Rerank Score: -5.043
+----------------------------------------
+
+3. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:46 - 01:50
+   Text: Basically, if you go up to the top of view stats, you can hit top subscribers.
+   Similarity Score: 0.369
+   Rerank Score: -5.355
+----------------------------------------
+
+4. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:54 - 01:56
+   Text: And obviously, you can see the most viewed YouTube channels.
+   Similarity Score: 0.354
+   Rerank Score: -6.039
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 9/20
+================================================================================
+📝 PROMPT: What is thumbnail search?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "How I Get Over 100,000,000 Views Per Video",
+    "text": "It's called thumbnail search, and you can type in whatever you want, and it will pull up thumbnails for you to get inspired off of.",
+    "start": 247.0,
+    "end": 255.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:07 - 04:12
+   Text: It's called thumbnail search, and you can type in whatever you want, and it will pull up thumbnails for you to get inspired off of.
+   Score: 0.357
+----------------------------------------
+
+2. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:59 - 05:06
+   Text: And if you're ever on YouTube and you see a thumbnail you like, you can just copy the URL to the video and paste it there and search with that thumbnail as well.
+   Score: 0.297
+----------------------------------------
+
+3. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:37 - 04:40
+   Text: And so what I'm gonna do is I'm gonna hit search by thumbnail.
+   Score: 0.275
+----------------------------------------
+
+4. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 05:19 - 05:24
+   Text: You upload a couple thumbnail options, YouTube tests them all out, and it tells you which one's the best.
+   Score: 0.264
+----------------------------------------
+
+5. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 05:24 - 05:44
+   Text: And why I think this tool would be valuable for you guys is instead of you having to run dozens or hundreds or thousands of AB thumbnail tests across all your videos on the channel to learn about what people want and don't want, What if instead you could just see every single AB thumbnail test every other YouTuber is running, and you could just study those and apply their findings to your channel and save a ton of time.
+   Score: 0.256
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:07 - 04:12
+   Text: It's called thumbnail search, and you can type in whatever you want, and it will pull up thumbnails for you to get inspired off of.
+   Similarity Score: 0.357
+   Rerank Score: 3.760
+----------------------------------------
+
+2. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:37 - 04:40
+   Text: And so what I'm gonna do is I'm gonna hit search by thumbnail.
+   Similarity Score: 0.275
+   Rerank Score: -1.590
+----------------------------------------
+
+3. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:59 - 05:06
+   Text: And if you're ever on YouTube and you see a thumbnail you like, you can just copy the URL to the video and paste it there and search with that thumbnail as well.
+   Similarity Score: 0.297
+   Rerank Score: -2.150
+----------------------------------------
+
+4. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 05:19 - 05:24
+   Text: You upload a couple thumbnail options, YouTube tests them all out, and it tells you which one's the best.
+   Similarity Score: 0.264
+   Rerank Score: -5.082
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 10/20
+================================================================================
+📝 PROMPT: How to create knowledge graphs?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "AI",
+    "text": "But how do you create that knowledge graph?",
+    "start": 650.3,
+    "end": 653.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 14:21 - 14:24
+   Text: Like how do you create the knowledge graph in the first place?
+   Score: 0.509
+----------------------------------------
+
+2. Video: AI
+   Time: 10:50 - 10:52
+   Text: But how do you create that knowledge graph?
+   Score: 0.479
+----------------------------------------
+
+3. Video: AI
+   Time: 10:42 - 10:47
+   Text: So there's a learning curve where people need to learn, how do I create the knowledge graph in the first place?
+   Score: 0.418
+----------------------------------------
+
+4. Video: AI
+   Time: 05:17 - 05:22
+   Text: It doesn't say you only use a knowledge graph, but you use a knowledge graph.
+   Score: 0.356
+----------------------------------------
+
+5. Video: AI
+   Time: 14:26 - 14:32
+   Text: So basically there are three types of data out in the world that I care about when I think about knowledge graph creation.
+   Score: 0.355
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 10:50 - 10:52
+   Text: But how do you create that knowledge graph?
+   Similarity Score: 0.479
+   Rerank Score: 10.805
+----------------------------------------
+
+2. Video: AI
+   Time: 14:21 - 14:24
+   Text: Like how do you create the knowledge graph in the first place?
+   Similarity Score: 0.509
+   Rerank Score: 10.766
+----------------------------------------
+
+3. Video: AI
+   Time: 10:42 - 10:47
+   Text: So there's a learning curve where people need to learn, how do I create the knowledge graph in the first place?
+   Similarity Score: 0.418
+   Rerank Score: 7.125
+----------------------------------------
+
+4. Video: AI
+   Time: 14:02 - 14:13
+   Text: So higher accuracy, better answers, easier to build once you're through the hump of creating the knowledge graph, and then increased explainability and governance for IT and the business.
+   Similarity Score: 0.287
+   Rerank Score: -1.217
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 11/20
+================================================================================
+📝 PROMPT: What happened before Google search?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "AI",
+    "text": "Everyone here in this room knows that the vast majority of web searches today are handled with Google. But some of you know that it didn't start that way, it started this way.",
+    "start": 49.3,
+    "end": 58.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 01:54 - 01:59
+   Text: But the AltaVista effect, too many search results was solved by Google.
+   Score: 0.353
+----------------------------------------
+
+2. Video: AI
+   Time: 01:43 - 01:53
+   Text: That wasn't a problem in the beginning because most of the things you search for when I went on onto the Internet in the beginning got zero results back because there was no content about that on the Internet.
+   Score: 0.339
+----------------------------------------
+
+3. Video: AI
+   Time: 01:06 - 01:15
+   Text: Back in the mid nineties, there was dozens of web search company, dozens plural, like thirty, forty, 50 web search companies, and they all used basically the same technology.
+   Score: 0.336
+----------------------------------------
+
+4. Video: AI
+   Time: 01:00 - 01:03
+   Text: Who here recognizes AltaVista's name?
+   Score: 0.324
+----------------------------------------
+
+5. Video: AI
+   Time: 01:27 - 01:40
+   Text: And the Alta effect kicked in, which was the notion that you search for something, you got a a thousand or thousands of hits back, and you have to look through page after page until you found the result that was relevant to you.
+   Score: 0.312
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 01:06 - 01:15
+   Text: Back in the mid nineties, there was dozens of web search company, dozens plural, like thirty, forty, 50 web search companies, and they all used basically the same technology.
+   Similarity Score: 0.336
+   Rerank Score: -4.406
+----------------------------------------
+
+2. Video: AI
+   Time: 04:09 - 04:19
+   Text: This is a knowledge graph and that was the next decade or so, twelve years of Google's dominance until a few months ago.
+   Similarity Score: 0.285
+   Rerank Score: -4.922
+----------------------------------------
+
+3. Video: AI
+   Time: 01:27 - 01:40
+   Text: And the Alta effect kicked in, which was the notion that you search for something, you got a a thousand or thousands of hits back, and you have to look through page after page until you found the result that was relevant to you.
+   Similarity Score: 0.312
+   Rerank Score: -4.965
+----------------------------------------
+
+4. Video: AI
+   Time: 00:47 - 00:49
+   Text: I'm gonna talk about search, the evolution of search.
+   Similarity Score: 0.290
+   Rerank Score: -5.258
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 12/20
+================================================================================
+📝 PROMPT: How to become a businessman?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Nikhil Kamath_ My Honest Business Advice",
+    "text": "When I actively wanted to become a businessman.",
+    "start": 1.4,
+    "end": 8.7
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 00:01 - 00:07
+   Text: When I actively wanted to become a businessman.
+   Score: 0.365
+----------------------------------------
+
+2. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:53 - 01:55
+   Text: General an entrepreneur also.
+   Score: 0.306
+----------------------------------------
+
+3. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:58 - 03:06
+   Text: Blindly on a business which will fetch you a profit, a definite profit in the next three years.
+   Score: 0.285
+----------------------------------------
+
+4. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:03 - 01:08
+   Text: Is I the right mean, I feel like you have to be passionate and all in.
+   Score: 0.283
+----------------------------------------
+
+5. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:47 - 01:52
+   Text: I mean, honestly, it's not like I ever thought earlier of becoming A responder?
+   Score: 0.283
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 00:01 - 00:07
+   Text: When I actively wanted to become a businessman.
+   Similarity Score: 0.365
+   Rerank Score: -0.460
+----------------------------------------
+
+2. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:53 - 01:55
+   Text: General an entrepreneur also.
+   Similarity Score: 0.306
+   Rerank Score: -7.145
+----------------------------------------
+
+3. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:30 - 01:31
+   Text: If your outcome is money, go that way.
+   Similarity Score: 0.280
+   Rerank Score: -10.211
+----------------------------------------
+
+4. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:03 - 01:08
+   Text: Is I the right mean, I feel like you have to be passionate and all in.
+   Similarity Score: 0.283
+   Rerank Score: -10.938
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 13/20
+================================================================================
+📝 PROMPT: What are ultradian cycles?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Exploring VideoDB for Efficient Video Chunking and Embedding-2",
+    "text": "So if I type something like what is the best ultradian cycle time.",
+    "start": 60.9,
+    "end": 65.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: api
+   Time: 19:00 - 19:02
+   Text: It's like 12 times it, right?
+   Score: 0.189
+----------------------------------------
+
+2. Video: AI
+   Time: 08:41 - 08:47
+   Text: There's been a ton of research articles about this in the last six months or something like that.
+   Score: 0.181
+----------------------------------------
+
+3. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 05:29 - 05:35
+   Text: They run lab tests twice a year to track over a 100 biomarkers and monitor for early signs of thousands of diseases.
+   Score: 0.174
+----------------------------------------
+
+4. Video: AI
+   Time: 08:12 - 08:18
+   Text: And then there's a number more advanced patterns, but that's kind of the next next talk I'll do in a year.
+   Score: 0.173
+----------------------------------------
+
+5. Video: AI
+   Time: 03:51 - 03:57
+   Text: It has these concept, the rings that we call nodes that are connected to other nodes through relationships.
+   Score: 0.172
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 03:51 - 03:57
+   Text: It has these concept, the rings that we call nodes that are connected to other nodes through relationships.
+   Similarity Score: 0.172
+   Rerank Score: -9.180
+----------------------------------------
+
+2. Video: AI
+   Time: 08:12 - 08:18
+   Text: And then there's a number more advanced patterns, but that's kind of the next next talk I'll do in a year.
+   Similarity Score: 0.173
+   Rerank Score: -9.742
+----------------------------------------
+
+3. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 05:29 - 05:35
+   Text: They run lab tests twice a year to track over a 100 biomarkers and monitor for early signs of thousands of diseases.
+   Similarity Score: 0.174
+   Rerank Score: -10.078
+----------------------------------------
+
+4. Video: AI
+   Time: 08:41 - 08:47
+   Text: There's been a ton of research articles about this in the last six months or something like that.
+   Similarity Score: 0.181
+   Rerank Score: -10.188
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 14/20
+================================================================================
+📝 PROMPT: How to use OpenAI for chatbots?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "api",
+    "text": "So like, you know, you would feed ChatGPT, and there's hundreds of different tutorials, guys, on how to make like a website chatbot with OpenAI.",
+    "start": 737.7,
+    "end": 750.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: api
+   Time: 12:17 - 12:25
+   Text: So like, you know, you would feed ChatGPT, and there's hundreds of different tutorials, guys, on how to make like a website chatbot with OpenAI.
+   Score: 0.407
+----------------------------------------
+
+2. Video: api
+   Time: 11:40 - 11:46
+   Text: Use OpenAI to suggest posts about a topic and then use Buffer's API to schedule them, right?
+   Score: 0.360
+----------------------------------------
+
+3. Video: api
+   Time: 04:28 - 04:33
+   Text: Now, with ChatGPT and the APIs, they can mimic human interaction.
+   Score: 0.358
+----------------------------------------
+
+4. Video: api
+   Time: 03:48 - 03:57
+   Text: All that means is we took boring tools and we made them extraordinary by adding OpenAI's API, or in other words, the ChatGPT API.
+   Score: 0.357
+----------------------------------------
+
+5. Video: api
+   Time: 12:09 - 12:17
+   Text: So embed ChatGPT as a chatbot into a website, and then you just add the context for the support from the user's business.
+   Score: 0.354
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: api
+   Time: 12:17 - 12:25
+   Text: So like, you know, you would feed ChatGPT, and there's hundreds of different tutorials, guys, on how to make like a website chatbot with OpenAI.
+   Similarity Score: 0.407
+   Rerank Score: -0.642
+----------------------------------------
+
+2. Video: AI
+   Time: 18:31 - 18:37
+   Text: There's a chat bot in here that you can use and you can introspect the result that gets back.
+   Similarity Score: 0.344
+   Rerank Score: -3.479
+----------------------------------------
+
+3. Video: api
+   Time: 03:48 - 03:57
+   Text: All that means is we took boring tools and we made them extraordinary by adding OpenAI's API, or in other words, the ChatGPT API.
+   Similarity Score: 0.357
+   Rerank Score: -4.102
+----------------------------------------
+
+4. Video: Colbert
+   Time: 00:52 - 00:59
+   Text: We're going to be using OpenAI LLM, so we need the langchain OpenAI package as well.
+   Similarity Score: 0.308
+   Rerank Score: -4.496
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 15/20
+================================================================================
+📝 PROMPT: What are profitable SaaS strategies?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "api",
+    "text": "So the most profitable founders I know, they treat APIs and accessing other people's code like attacks on progress, right?",
+    "start": 433.6,
+    "end": 445.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: api
+   Time: 00:06 - 00:18
+   Text: And in this video, I'm gonna be talking about how in every SaaS product I've ever built that was profitable, I've leveraged other people's code to achieve the end result for the user, right?
+   Score: 0.321
+----------------------------------------
+
+2. Video: api
+   Time: 00:41 - 00:46
+   Text: People want things and you can give them these things at scale using SaaS, right?
+   Score: 0.289
+----------------------------------------
+
+3. Video: api
+   Time: 06:42 - 06:49
+   Text: My last SaaS, Response AI, charged around $99 a month for 10,000 AI video credits, right?
+   Score: 0.281
+----------------------------------------
+
+4. Video: api
+   Time: 00:31 - 00:40
+   Text: So the most valuable skill in modern entrepreneurship, and SaaS specifically, is not code or design or sales, it's just recognizing patterns, right?
+   Score: 0.280
+----------------------------------------
+
+5. Video: api
+   Time: 08:44 - 08:49
+   Text: Your SaaS should create a result at the end that users like, right?
+   Score: 0.277
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: api
+   Time: 00:06 - 00:18
+   Text: And in this video, I'm gonna be talking about how in every SaaS product I've ever built that was profitable, I've leveraged other people's code to achieve the end result for the user, right?
+   Similarity Score: 0.321
+   Rerank Score: -4.266
+----------------------------------------
+
+2. Video: api
+   Time: 13:25 - 13:29
+   Text: In both of the profitable ones that are actually scaling up and doing well right now.
+   Similarity Score: 0.250
+   Rerank Score: -5.957
+----------------------------------------
+
+3. Video: api
+   Time: 03:19 - 03:23
+   Text: The goal, guys, for building a SaaS is not to build a faultless system.
+   Similarity Score: 0.264
+   Rerank Score: -6.285
+----------------------------------------
+
+4. Video: api
+   Time: 08:44 - 08:49
+   Text: Your SaaS should create a result at the end that users like, right?
+   Similarity Score: 0.277
+   Rerank Score: -6.504
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 16/20
+================================================================================
+📝 PROMPT: What is video ranking?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "How I Get Over 100,000,000 Views Per Video",
+    "text": "You can hit ranking and see what it ranked out of 10 when I uploaded it.",
+    "start": 156.6,
+    "end": 162.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 02:36 - 02:40
+   Text: You can hit ranking and see what it ranked out of 10 when I uploaded it.
+   Score: 0.391
+----------------------------------------
+
+2. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:03 - 01:05
+   Text: On top of that, you can see what it ranked out of 10.
+   Score: 0.360
+----------------------------------------
+
+3. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:17 - 01:21
+   Text: But now you can see any video on all of YouTube when it ranks out of 10, which I thought was pretty cool.
+   Score: 0.355
+----------------------------------------
+
+4. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:07 - 04:12
+   Text: It's called thumbnail search, and you can type in whatever you want, and it will pull up thumbnails for you to get inspired off of.
+   Score: 0.320
+----------------------------------------
+
+5. Video: AI
+   Time: 08:00 - 08:05
+   Text: You rank that, you get the top k based on the structure of the graph.
+   Score: 0.318
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:17 - 01:21
+   Text: But now you can see any video on all of YouTube when it ranks out of 10, which I thought was pretty cool.
+   Similarity Score: 0.355
+   Rerank Score: -4.164
+----------------------------------------
+
+2. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 02:36 - 02:40
+   Text: You can hit ranking and see what it ranked out of 10 when I uploaded it.
+   Similarity Score: 0.391
+   Rerank Score: -5.566
+----------------------------------------
+
+3. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:57 - 02:01
+   Text: But where it gets very cool, you can also see the top 50 most viewed videos from the previous day.
+   Similarity Score: 0.317
+   Rerank Score: -6.141
+----------------------------------------
+
+4. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:06 - 01:10
+   Text: You just click here and then it'll show you that that video is four out of 10.
+   Similarity Score: 0.310
+   Rerank Score: -6.844
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 17/20
+================================================================================
+📝 PROMPT: How does contextual chunking work?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Contextual Retrieval with Any LLM_ A Step-by-Step Guide",
+    "text": "The contextual retrieval system adds a pre processing step in which we take each chunk, feed that into a specific prompt, which also looks at the whole document, and then that prompt identify or locate that chunk in the whole document and add contextual information related to that specific chunk.",
+    "start": 76.0,
+    "end": 95.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 06:22 - 06:36
+   Text: And then there's another function called generate contextualized chunks, which receives the original document that we provided along with the chunks that we just created, and this will, return the contextualized chunks.
+   Score: 0.417
+----------------------------------------
+
+2. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 06:37 - 06:41
+   Text: So let's look at how this contextualized chunks works.
+   Score: 0.415
+----------------------------------------
+
+3. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 14:27 - 14:33
+   Text: Now, apart from this, there is also the concept of late chunking in long context embedding models.
+   Score: 0.410
+----------------------------------------
+
+4. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 06:41 - 06:48
+   Text: So we take each chunk individually, and then there's another function called generateContext.
+   Score: 0.402
+----------------------------------------
+
+5. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 06:48 - 06:56
+   Text: So for each chunk, we provide the original document plus that given chunk and pass it on to generate context.
+   Score: 0.397
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 06:37 - 06:41
+   Text: So let's look at how this contextualized chunks works.
+   Similarity Score: 0.415
+   Rerank Score: 7.164
+----------------------------------------
+
+2. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 01:15 - 01:40
+   Text: The contextual retrieval system adds a pre processing step in which we take each chunk, feed that into a specific prompt, which also looks at the whole document, and then that prompt identify or locate that chunk in the whole document and add contextual information related to that specific chunk.
+   Similarity Score: 0.391
+   Rerank Score: 3.730
+----------------------------------------
+
+3. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 06:22 - 06:36
+   Text: And then there's another function called generate contextualized chunks, which receives the original document that we provided along with the chunks that we just created, and this will, return the contextualized chunks.
+   Similarity Score: 0.417
+   Rerank Score: 2.463
+----------------------------------------
+
+4. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 06:48 - 06:56
+   Text: So for each chunk, we provide the original document plus that given chunk and pass it on to generate context.
+   Similarity Score: 0.397
+   Rerank Score: 1.900
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 18/20
+================================================================================
+📝 PROMPT: What embeddings are used in contextual retrieval?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Contextual Retrieval with Any LLM_ A Step-by-Step Guide",
+    "text": "For embeddings, we're using the OpenAI embedding.",
+    "start": 319.6,
+    "end": 323.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 05:19 - 05:22
+   Text: For embeddings, we're using the OpenAI embedding.
+   Score: 0.400
+----------------------------------------
+
+2. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 00:47 - 00:52
+   Text: Each of the independent chunks are embedded using an embedding model and stored in a vector store.
+   Score: 0.377
+----------------------------------------
+
+3. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 12:23 - 12:36
+   Text: And the way we do it is that we're doing a retrieval on the original vector store, contextualized vector store, and then the BM 25 index created on the original contextualized chunks.
+   Score: 0.370
+----------------------------------------
+
+4. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 01:15 - 01:40
+   Text: The contextual retrieval system adds a pre processing step in which we take each chunk, feed that into a specific prompt, which also looks at the whole document, and then that prompt identify or locate that chunk in the whole document and add contextual information related to that specific chunk.
+   Score: 0.364
+----------------------------------------
+
+5. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 01:48 - 01:59
+   Text: And then we take these updated contextual chunks, compute embeddings, put them in a vector store, and at the same point, we do the efficient execution based on these updated chunks.
+   Score: 0.360
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 00:00 - 00:18
+   Text: In a previous video, we looked at contextual retrieval, which is a new chunking strategy from Anthropic, which has shown to improve the failure rates by thirty five percent in contextual embeddings, and when combined with PM25, the failure rate can be reduced by forty nine percent.
+   Similarity Score: 0.348
+   Rerank Score: 2.273
+----------------------------------------
+
+2. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 13:29 - 13:39
+   Text: This was a quick overview of how you can potentially implement this contextual retrieval for any LLM and any embedded model of your choice.
+   Similarity Score: 0.349
+   Rerank Score: 0.336
+----------------------------------------
+
+3. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 01:15 - 01:40
+   Text: The contextual retrieval system adds a pre processing step in which we take each chunk, feed that into a specific prompt, which also looks at the whole document, and then that prompt identify or locate that chunk in the whole document and add contextual information related to that specific chunk.
+   Similarity Score: 0.364
+   Rerank Score: -0.972
+----------------------------------------
+
+4. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 12:23 - 12:36
+   Text: And the way we do it is that we're doing a retrieval on the original vector store, contextualized vector store, and then the BM 25 index created on the original contextualized chunks.
+   Similarity Score: 0.370
+   Rerank Score: -1.539
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 19/20
+================================================================================
+📝 PROMPT: What is the core pattern for data applications?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "AI",
+    "text": "So the core pattern is actually really really simple, but really really powerful.",
+    "start": 446.1,
+    "end": 451.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 07:26 - 07:30
+   Text: So the core pattern is actually really really simple, but really really powerful.
+   Score: 0.295
+----------------------------------------
+
+2. Video: AI
+   Time: 00:13 - 00:37
+   Text: I basically dedicated my professional life towards getting developers to be able to build better applications and build applications better by leveraging not just individual data points, kind of retrieved at once, like one at a time, or summed up or group calculated averages, but individual data points connected by relationships.
+   Score: 0.289
+----------------------------------------
+
+3. Video: api
+   Time: 00:31 - 00:40
+   Text: So the most valuable skill in modern entrepreneurship, and SaaS specifically, is not code or design or sales, it's just recognizing patterns, right?
+   Score: 0.269
+----------------------------------------
+
+4. Video: AI
+   Time: 11:16 - 11:26
+   Text: And they took an existing application and they said, you know what, we are gonna port this from a vector database to Neo four j and most of the operations yield a better result.
+   Score: 0.255
+----------------------------------------
+
+5. Video: api
+   Time: 04:40 - 04:50
+   Text: This is because the simple app, which was customer support, just a yes, no, you know, sort of simple flow, It's accessing APIs to make it more powerful, right?
+   Score: 0.255
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 07:26 - 07:30
+   Text: So the core pattern is actually really really simple, but really really powerful.
+   Similarity Score: 0.295
+   Rerank Score: -2.367
+----------------------------------------
+
+2. Video: AI
+   Time: 00:13 - 00:37
+   Text: I basically dedicated my professional life towards getting developers to be able to build better applications and build applications better by leveraging not just individual data points, kind of retrieved at once, like one at a time, or summed up or group calculated averages, but individual data points connected by relationships.
+   Similarity Score: 0.289
+   Rerank Score: -6.336
+----------------------------------------
+
+3. Video: AI
+   Time: 13:47 - 13:59
+   Text: That explicit data structure has knock on effects over there that are really really powerful once you're up and running in production and you need to be able to explain why something happened.
+   Similarity Score: 0.248
+   Rerank Score: -7.059
+----------------------------------------
+
+4. Video: AI
+   Time: 13:08 - 13:15
+   Text: It is explicit, it's deterministic, it's visual, you can see it, you can touch it as you build your applications.
+   Similarity Score: 0.253
+   Rerank Score: -7.469
+----------------------------------------
+
+================================================================================
+
+
+🧪 TEST CASE 20/20
+================================================================================
+📝 PROMPT: How to create a brand?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Nikhil Kamath_ My Honest Business Advice",
+    "text": "It was not the other way around that, Let me create a brand and now let me find out what brand to create.",
+    "start": 131.1,
+    "end": 140.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:11 - 02:15
+   Text: It was not the other way around that, Let me create a brand and now let me find out what brand to create.
+   Score: 0.346
+----------------------------------------
+
+2. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:07 - 02:11
+   Text: I am so interested in it that, Okay, let me see if I can create a brand.
+   Score: 0.329
+----------------------------------------
+
+3. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 04:05 - 04:09
+   Text: You don't even need to create a brand, you need to create an efficient system product.
+   Score: 0.325
+----------------------------------------
+
+4. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:55 - 01:58
+   Text: I didn't really think, I'll start a brand or I'll start something.
+   Score: 0.292
+----------------------------------------
+
+5. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:24 - 02:26
+   Text: Skincare again is a very hard industry to crack.
+   Score: 0.232
+----------------------------------------
+
+🎯 RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:07 - 02:11
+   Text: I am so interested in it that, Okay, let me see if I can create a brand.
+   Similarity Score: 0.329
+   Rerank Score: 0.382
+----------------------------------------
+
+2. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:11 - 02:15
+   Text: It was not the other way around that, Let me create a brand and now let me find out what brand to create.
+   Similarity Score: 0.346
+   Rerank Score: -0.197
+----------------------------------------
+
+3. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:55 - 01:58
+   Text: I didn't really think, I'll start a brand or I'll start something.
+   Similarity Score: 0.292
+   Rerank Score: -5.656
+----------------------------------------
+
+4. Video: api
+   Time: 16:53 - 16:57
+   Text: It's very important that you guys build something that sticks people to it.
+   Similarity Score: 0.214
+   Rerank Score: -6.383
+----------------------------------------
+
+================================================================================
+
+
+🎯 COMPREHENSIVE EVALUATION RESULTS
+====================================================================================================
+📈 RETRIEVAL PERFORMANCE:
+                    │   Basic    │  Reranker  │ Improvement
+   ─────────────────┼────────────┼────────────┼─────────────
+   Hit Rate         │     85.0%   │     90.0%   │     +5.0%
+   Precision@5      │      0.780   │      0.650   │     -0.130
+   Recall@5         │      3.900   │      3.250   │     -0.650
+   Mean Reciprocal  │      0.850   │      0.900   │     +0.050
+   Rank (MRR)       │            │            │
+
+⏱️  PERFORMANCE TIMING:
+   Average Query Time:
+     Basic Search:    0.637s
+     Reranked Search: 1.212s
+     Rerank Overhead: +90.2%
+
+💰 TOKEN USAGE ANALYSIS:
+   Total Embedding Tokens: 0
+   Tokens per Query: 0.0
+   Total Queries: 40
+   Estimated Cost: $0.0000
+
+🏆 FINAL VERDICT:
+   🥈 RERANKER WINS marginally
+      ↗️  Small improvements across metrics
+
+📝 RECOMMENDATION:
+   Both options are viable - test with your specific use case
+
+

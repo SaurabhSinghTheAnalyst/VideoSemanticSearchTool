@@ -1,6 +1,11 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from search_engine import SemanticSearchEngine
 from embedding_manager import EmbeddingManager
 import json
+import time
 
 # Diverse test cases for robust evaluation
 # Each prompt is crafted to test different retrieval capabilities
@@ -158,54 +163,177 @@ test_cases = [
     },
 ]
 
-def evaluate_retrieval(query, retrieved_docs, k=5):
+def evaluate_retrieval(query, retrieved_docs, expected_docs, k=5):
     """
     Evaluate the retrieval performance of a model.
+    Returns precision@k and whether expected content was found in top-k results.
     """
-    relevant_docs = [doc for doc in retrieved_docs if doc.get("relevant", False)]
-    precision_at_k = len(relevant_docs) / k
-    return precision_at_k
+    if not retrieved_docs:
+        return 0.0, False
+    
+    # Check if any expected video appears in top-k results
+    expected_video_names = {doc["video_name"] for doc in expected_docs}
+    retrieved_video_names = {doc["video_file"] for doc in retrieved_docs[:k]}
+    
+    found_expected = bool(expected_video_names.intersection(retrieved_video_names))
+    
+    # Simple precision calculation based on relevance
+    relevant_docs = [doc for doc in retrieved_docs[:k] if doc.get("relevant", False)]
+    precision_at_k = len(relevant_docs) / k if k > 0 else 0.0
+    
+    return precision_at_k, found_expected
 
-print("🔧 Initializing search engines...")
-embedding_manager = EmbeddingManager()
-index = embedding_manager.load_existing_index()
-search_engine_basic = SemanticSearchEngine(index, use_reranker=False)
-print("✅ Basic search engine ready!")
-search_engine_rerank = SemanticSearchEngine(index, use_reranker=True)
-print("✅ Reranker search engine ready!\n")
+def run_evaluation():
+    """Run comprehensive evaluation with timing and token usage logging."""
+    print("🔧 Initializing unified embedding manager...")
+    
+    try:
+        # Initialize unified embedding manager
+        embedding_manager = EmbeddingManager()
+        
+        # Check if index exists
+        stats = embedding_manager.get_collection_stats()
+        if not stats or stats['document_count'] == 0:
+            print("❌ No index found or empty index. Please run transcript processing first.")
+            print("   Run: python -c 'from embedding_manager import EmbeddingManager; EmbeddingManager().process_all_transcripts()'")
+            return
+        
+        print(f"📊 Index loaded with {stats['document_count']} documents")
+        
+        # Load index using unified embedding manager
+        index = embedding_manager.load_existing_index()
+        if not index:
+            print("❌ Failed to load index")
+            return
+        
+        # Initialize search engines
+        search_engine_basic = SemanticSearchEngine(index, use_reranker=False)
+        print("✅ Basic search engine ready!")
+        
+        search_engine_rerank = SemanticSearchEngine(index, use_reranker=True)
+        print("✅ Reranker search engine ready!\n")
+        
+        # Evaluation metrics
+        basic_scores = []
+        rerank_scores = []
+        basic_found_count = 0
+        rerank_found_count = 0
+        total_basic_time = 0
+        total_rerank_time = 0
+        
+        # Reset token counter for evaluation
+        initial_tokens = embedding_manager.token_counter.total_embedding_token_count
+        
+        print(f"🧪 STARTING EVALUATION OF {len(test_cases)} TEST CASES")
+        print("=" * 100)
+        
+        for i, test_case in enumerate(test_cases, 1):
+            prompt = test_case["prompt"]
+            expected_docs = test_case["expected_docs"]
+            
+            print(f"\n🧪 TEST CASE {i}/{len(test_cases)}")
+            print("=" * 80)
+            print(f"📝 PROMPT: {prompt}")
+            print("\n📋 EXPECTED DOCUMENT:")
+            print(json.dumps(expected_docs, indent=2, ensure_ascii=False))
+            
+            # Basic search with timing
+            print(f"\n🔍 BASIC SEARCH RESULTS:")
+            print("-" * 60)
+            
+            start_time = time.time()
+            basic_results = search_engine_basic.search(prompt, top_k=3)
+            basic_time = time.time() - start_time
+            total_basic_time += basic_time
+            
+            if basic_results:
+                for j, doc in enumerate(basic_results, 1):
+                    print(f"\n{j}. Video: {doc['video_file']}")
+                    print(f"   Time: {doc['timestamp']}")
+                    print(f"   Text: {doc['text'][:100]}...")
+                    print(f"   Score: {doc['similarity_score']:.3f}")
+                print(f"\n⏱️  Basic search time: {basic_time:.2f}s")
+            else:
+                print("No results found.")
+            
+            # Evaluate basic search
+            basic_precision, basic_found = evaluate_retrieval(prompt, basic_results, expected_docs, k=3)
+            basic_scores.append(basic_precision)
+            if basic_found:
+                basic_found_count += 1
+            
+            # Reranked search with timing
+            print(f"\n🎯 RERANKED SEARCH RESULTS:")
+            print("-" * 60)
+            
+            start_time = time.time()
+            rerank_results = search_engine_rerank.search(prompt, top_k=3)
+            rerank_time = time.time() - start_time
+            total_rerank_time += rerank_time
+            
+            if rerank_results:
+                for j, doc in enumerate(rerank_results, 1):
+                    print(f"\n{j}. Video: {doc['video_file']}")
+                    print(f"   Time: {doc['timestamp']}")
+                    print(f"   Text: {doc['text'][:100]}...")
+                    print(f"   Similarity Score: {doc['similarity_score']:.3f}")
+                    if 'rerank_score' in doc:
+                        print(f"   Rerank Score: {doc['rerank_score']:.3f}")
+                print(f"\n⏱️  Rerank search time: {rerank_time:.2f}s")
+            else:
+                print("No results found.")
+            
+            # Evaluate reranked search
+            rerank_precision, rerank_found = evaluate_retrieval(prompt, rerank_results, expected_docs, k=3)
+            rerank_scores.append(rerank_precision)
+            if rerank_found:
+                rerank_found_count += 1
+            
+            print(f"\n📊 EVALUATION METRICS:")
+            print(f"   Basic - Found Expected: {'✅' if basic_found else '❌'}")
+            print(f"   Rerank - Found Expected: {'✅' if rerank_found else '❌'}")
+            print(f"{'='*80}")
+        
+        # Final evaluation summary
+        print(f"\n🎯 FINAL EVALUATION SUMMARY")
+        print("=" * 100)
+        
+        avg_basic_precision = sum(basic_scores) / len(basic_scores) if basic_scores else 0
+        avg_rerank_precision = sum(rerank_scores) / len(rerank_scores) if rerank_scores else 0
+        
+        basic_hit_rate = basic_found_count / len(test_cases) * 100
+        rerank_hit_rate = rerank_found_count / len(test_cases) * 100
+        
+        print(f"📈 PERFORMANCE METRICS:")
+        print(f"   Basic Search Hit Rate: {basic_hit_rate:.1f}% ({basic_found_count}/{len(test_cases)})")
+        print(f"   Rerank Search Hit Rate: {rerank_hit_rate:.1f}% ({rerank_found_count}/{len(test_cases)})")
+        print(f"   Average Basic Precision@3: {avg_basic_precision:.3f}")
+        print(f"   Average Rerank Precision@3: {avg_rerank_precision:.3f}")
+        
+        print(f"\n⏱️  TIMING ANALYSIS:")
+        print(f"   Total Basic Search Time: {total_basic_time:.2f}s")
+        print(f"   Total Rerank Search Time: {total_rerank_time:.2f}s")
+        print(f"   Average Basic Search Time: {total_basic_time/len(test_cases):.2f}s")
+        print(f"   Average Rerank Search Time: {total_rerank_time/len(test_cases):.2f}s")
+        print(f"   Rerank Overhead: {((total_rerank_time/total_basic_time)-1)*100:.1f}% slower")
+        
+        print(f"\n💰 TOKEN USAGE:")
+        total_tokens_used = embedding_manager.token_counter.total_embedding_token_count - initial_tokens
+        print(f"   Total Embedding Tokens Used: {total_tokens_used}")
+        print(f"   Average Tokens per Query: {total_tokens_used/(len(test_cases)*2):.1f}")
+        
+        print(f"\n🏆 WINNER:")
+        if rerank_hit_rate > basic_hit_rate:
+            print(f"   🥇 Reranker wins with {rerank_hit_rate:.1f}% hit rate (+{rerank_hit_rate-basic_hit_rate:.1f}%)")
+        elif basic_hit_rate > rerank_hit_rate:
+            print(f"   🥇 Basic search wins with {basic_hit_rate:.1f}% hit rate (+{basic_hit_rate-rerank_hit_rate:.1f}%)")
+        else:
+            print(f"   🤝 Tie at {basic_hit_rate:.1f}% hit rate")
+        
+    except Exception as e:
+        print(f"❌ Evaluation failed: {e}")
+        import traceback
+        traceback.print_exc()
 
-for i, test_case in enumerate(test_cases, 1):
-    prompt = test_case["prompt"]
-    expected_docs = test_case["expected_docs"]
-    print(f"🧪 TEST CASE {i}/{len(test_cases)}")
-    print("=" * 80)
-    print(f"📝 PROMPT: {prompt}")
-    print("\n📋 EXPECTED DOCUMENT:")
-    print(json.dumps(expected_docs, indent=2, ensure_ascii=False))
-    print(f"\n🔍 BASIC SEARCH RESULTS:")
-    print("-" * 60)
-    basic_results = search_engine_basic.search(prompt, top_k=3)
-    if basic_results:
-        for j, doc in enumerate(basic_results, 1):
-            print(f"\n{j}. Video: {doc['video_file']}")
-            print(f"   Time: {doc['timestamp']}")
-            print(f"   Text: {doc['text']}")
-            print(f"   Score: {doc['similarity_score']:.3f}")
-            print("-" * 40)
-    else:
-        print("No results found.")
-    print(f"\n🎯 RERANKED SEARCH RESULTS:")
-    print("-" * 60)
-    rerank_results = search_engine_rerank.search(prompt, top_k=3)
-    if rerank_results:
-        for j, doc in enumerate(rerank_results, 1):
-            print(f"\n{j}. Video: {doc['video_file']}")
-            print(f"   Time: {doc['timestamp']}")
-            print(f"   Text: {doc['text']}")
-            print(f"   Similarity Score: {doc['similarity_score']:.3f}")
-            if 'rerank_score' in doc:
-                print(f"   Rerank Score: {doc['rerank_score']:.3f}")
-            print("-" * 40)
-    else:
-        print("No results found.")
-    print(f"\n{'='*80}\n") 
+if __name__ == "__main__":
+    run_evaluation() 

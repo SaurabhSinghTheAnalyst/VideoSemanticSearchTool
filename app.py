@@ -5,7 +5,6 @@ import time
 from video_processor import DeepgramTranscriber
 from embedding_manager import EmbeddingManager
 from search_engine import SemanticSearchEngine
-from batch_processor import process_all_transcripts
 import dotenv
 dotenv.load_dotenv()
 
@@ -167,8 +166,9 @@ def rebuild_index_ui():
         if st.button("🔄 Rebuild Search Index"):
             with st.spinner("Rebuilding search index..."):
                 try:
-                    search_engine, embedding_manager = process_all_transcripts(rebuild_index=True)
-                    if search_engine:
+                    embedding_manager = EmbeddingManager()
+                    index = embedding_manager.rebuild_search_index()
+                    if index:
                         st.success("Search index rebuilt successfully!")
                         st.cache_resource.clear()  # Clear cache to reload
                     else:
@@ -273,8 +273,9 @@ def sidebar_index_management():
     if st.sidebar.button("🔄 Rebuild Search Index"):
         with st.spinner("Rebuilding search index..."):
             try:
-                search_engine, embedding_manager = process_all_transcripts(rebuild_index=True)
-                if search_engine:
+                embedding_manager = EmbeddingManager()
+                index = embedding_manager.rebuild_search_index()
+                if index:
                     st.sidebar.success("Search index rebuilt successfully!")
                     st.cache_resource.clear()  # Clear cache to reload
                 else:
@@ -357,7 +358,8 @@ def main():
                         # Auto-rebuild search index after processing
                         with st.spinner("Updating search index..."):
                             try:
-                                process_all_transcripts()
+                                embedding_manager = EmbeddingManager()
+                                index = embedding_manager.process_all_transcripts()
                                 st.cache_resource.clear()  # Clear cache to reload search engine
                                 st.info("Search index updated! You can now search the new transcripts.")
                             except Exception as e:

@@ -18,7 +18,28 @@ A powerful Streamlit app for uploading videos, extracting audio, generating tran
 - ⏰ Get exact timestamps for each match
 - 📺 Filter search by specific videos
 - 📊 Similarity scoring for result relevance
-- 🚀 Fast vector-based search using ChromaDB and HuggingFace embeddings
+- 🚀 Fast vector-based search using ChromaDB and OpenAI embeddings
+- 🔄 Advanced reranking for improved search quality
+
+## Architecture
+
+### Core Components
+
+- **`embedding_manager.py`** - Consolidated module handling:
+  - Transcript processing (from Deepgram JSON format)
+  - Batch operations and index management
+  - Vector embedding creation and storage
+  - ChromaDB persistence
+
+- **`search_engine.py`** - Semantic search with optional BGE reranking
+- **`video_processor.py`** - Video-to-audio conversion and transcription
+- **`app.py`** - Streamlit web interface
+- **`evaluation_*.py`** - Performance evaluation tools
+
+### Evaluation Tools
+- **`evaluation_diverse.py`** - Tests multiple embedding models
+- **`evaluation_reranker.py`** - Compares basic vs reranked search
+- **`test_unified_embedding.py`** - Comprehensive testing suite
 
 ## Setup
 
@@ -27,10 +48,15 @@ A powerful Streamlit app for uploading videos, extracting audio, generating tran
    pip install -r requirements.txt
    ```
 
-2. **Set up Deepgram API key:**
-   ```bash
-   export DEEPGRAM_API_KEY="your_deepgram_api_key_here"
-   ```
+2. **Set up API keys:**
+   - **Deepgram API key** for transcription:
+     ```bash
+     export DEEPGRAM_API_KEY="your_deepgram_api_key_here"
+     ```
+   - **OpenAI API key** for embeddings:
+     ```bash
+     export OPENAI_API_KEY="your_openai_api_key_here"
+     ```
 
 3. **Run the app:**
    ```bash
@@ -56,14 +82,39 @@ A powerful Streamlit app for uploading videos, extracting audio, generating tran
 3. Browse results with exact timestamps and similarity scores
 4. Use the "Index Management" section to check status or rebuild the search index
 
+## Command Line Tools
+
+### Process Transcripts
+```bash
+# Process all transcripts and build search index
+python embedding_manager.py
+
+# Test search functionality
+python -c "from embedding_manager import test_search_functionality; test_search_functionality('your query')"
+```
+
+### Run Evaluations
+```bash
+# Compare different embedding models
+python evaluation_diverse.py
+
+# Compare basic vs reranked search
+python evaluation_reranker.py
+
+# Run comprehensive tests
+python test_unified_embedding.py
+```
+
 ## Output Files
 
 - **Videos**: Saved in `Data/` folder
 - **Audio**: Extracted audio files in `audio/` folder (MP3 format)
 - **Transcripts**: JSON transcription files in `transcripts/` folder
+- **Search Index**: ChromaDB vector store in `chroma_db/` folder
 
 ## Requirements
 
 - Python 3.7+
 - Deepgram API key (sign up at [deepgram.com](https://deepgram.com))
-- Internet connection for transcription service 
+- OpenAI API key (sign up at [openai.com](https://openai.com))
+- Internet connection for transcription and embedding services 
