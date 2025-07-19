@@ -1,6 +1,11 @@
+import os
+import dotenv
 from llama_index.core import QueryBundle
 from llama_index.core.retrievers import VectorIndexRetriever
-from FlagEmbedding import FlagReranker
+import cohere
+
+# Load environment variables
+dotenv.load_dotenv()
 
 class SemanticSearchEngine:
     def __init__(self, index, use_reranker=False):
@@ -11,14 +16,19 @@ class SemanticSearchEngine:
         
         # Initialize reranker if requested
         self.use_reranker = use_reranker
-        self.reranker = None
+        self.cohere_client = None
         if use_reranker:
             try:
-                print("Loading BGE reranker...")
-                self.reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True)
-                print("✅ BGE reranker loaded successfully")
+                print("Loading Cohere reranker...")
+                cohere_api_key = os.environ.get("COHERE_API_KEY")
+                if not cohere_api_key:
+                    print("⚠️  COHERE_API_KEY not found in environment variables")
+                    self.use_reranker = False
+                else:
+                    self.cohere_client = cohere.ClientV2(api_key=cohere_api_key)
+                    print("✅ Cohere reranker loaded successfully")
             except Exception as e:
-                print(f"⚠️ Failed to load reranker: {e}")
+                print(f"⚠️ Failed to load Cohere reranker: {e}")
                 self.use_reranker = False
     
     def search(self, query, video_filter=None, top_k=5):
@@ -59,7 +69,7 @@ class SemanticSearchEngine:
                 candidate_results.append(result)
             
             # Apply reranking if enabled
-            if self.use_reranker and self.reranker and len(candidate_results) > 1:
+            if self.use_reranker and self.cohere_client and len(candidate_results) > 1:
                 reranked_results = self._rerank_results(query, candidate_results, top_k)
                 return reranked_results
             else:
@@ -70,29 +80,33 @@ class SemanticSearchEngine:
             return []
     
     def _rerank_results(self, query, results, top_k):
-        """Rerank results using BGE reranker"""
+        """Rerank results using Cohere reranker API"""
         try:
-            # Prepare query-document pairs
-            pairs = [[query, result["text"]] for result in results]
+            # Prepare documents for Cohere API
+            documents = [result["text"] for result in results]
             
-            # Get reranking scores
-            scores = self.reranker.compute_score(pairs)
+            # Call Cohere rerank API (v2 doesn't use return_documents parameter)
+            response = self.cohere_client.rerank(
+                model="rerank-v3.5",
+                query=query,
+                documents=documents,
+                top_n=min(top_k, len(documents))  # Don't exceed available documents
+            )
             
-            # Ensure scores is a list
-            if not isinstance(scores, list):
-                scores = [scores]
+            # Map reranked results back to original format
+            reranked_results = []
+            for reranked_item in response.results:
+                # Get the original result using the index
+                original_result = results[reranked_item.index].copy()
+                # Add Cohere rerank score
+                original_result["rerank_score"] = float(reranked_item.relevance_score)
+                reranked_results.append(original_result)
             
-            # Add rerank scores to results
-            for result, score in zip(results, scores):
-                result["rerank_score"] = float(score)
-            
-            # Sort by rerank score (higher is better)
-            reranked_results = sorted(results, key=lambda x: x["rerank_score"], reverse=True)
-            
-            return reranked_results[:top_k]
+            return reranked_results
             
         except Exception as e:
-            print(f"Error during reranking: {e}")
+            print(f"Error during Cohere reranking: {e}")
+            # Fallback to original similarity-based ranking
             return results[:top_k]
     
     def search_by_video(self, query, video_name, top_k=5):
