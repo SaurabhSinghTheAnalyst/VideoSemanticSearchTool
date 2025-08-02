@@ -1,0 +1,2046 @@
+🔧 Initializing search engines...
+LLM is explicitly disabled. Using MockLLM.
+Loaded existing collection: video_transcripts
+Loaded existing index successfully!
+📊 Index contains 955 documents
+Loaded existing index successfully!
+✅ Basic search engine ready!
+Loading Cohere reranker...
+✅ Cohere reranker loaded successfully
+✅ Cohere reranker search engine ready!
+
+🧪 RUNNING EVALUATION ON 21 TEST CASES
+================================================================================
+
+🧪 TEST CASE 1/21 | Category: DIRECT_MATCH
+================================================================================
+📝 PROMPT: How to earn your status?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "It's Never Been Easier To Make Money - Naval Ravikant",
+    "text": "But even back then, you had to earn your status by taking care of the tribe....",
+    "start": 29.17,
+    "end": 32.77
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 01:02 - 01:14
+   Text: Now you can have multiple kinds of status, so you can expand some kinds of statu...
+   Score: 0.212
+----------------------------------------
+
+2. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 03:09 - 03:15
+   Text: It's funny how, people who have achieved such a level of wealth, you don't think...
+   Score: 0.212
+----------------------------------------
+
+3. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 03:15 - 03:26
+   Text: Given that most people use status to then try and cash in to achieve wealth, if ...
+   Score: 0.210
+----------------------------------------
+
+4. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 01:14 - 01:18
+   Text: So just realize the status games are inherently limited....
+   Score: 0.209
+----------------------------------------
+
+5. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 00:29 - 00:32
+   Text: But even back then, you had to earn your status by taking care of the tribe....
+   Score: 0.206
+----------------------------------------
+
+6. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 00:00 - 00:04
+   Text: How should people learn to get less distracted by status games in that way?...
+   Score: 0.203
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 00:29 - 00:32
+   Text: But even back then, you had to earn your status by taking care of the tribe....
+   Similarity Score: 0.206
+   🎯 Cohere Rerank Score: 0.590
+----------------------------------------
+
+2. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 01:02 - 01:14
+   Text: Now you can have multiple kinds of status, so you can expand some kinds of statu...
+   Similarity Score: 0.212
+   🎯 Cohere Rerank Score: 0.145
+----------------------------------------
+
+3. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 01:14 - 01:18
+   Text: So just realize the status games are inherently limited....
+   Similarity Score: 0.209
+   🎯 Cohere Rerank Score: 0.130
+----------------------------------------
+
+4. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 03:15 - 03:26
+   Text: Given that most people use status to then try and cash in to achieve wealth, if ...
+   Similarity Score: 0.210
+   🎯 Cohere Rerank Score: 0.127
+----------------------------------------
+
+5. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 03:09 - 03:15
+   Text: It's funny how, people who have achieved such a level of wealth, you don't think...
+   Similarity Score: 0.212
+   🎯 Cohere Rerank Score: 0.123
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.31s
+   Cohere - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.63s
+================================================================================
+
+
+🧪 TEST CASE 2/21 | Category: TECHNICAL_DEFINITION
+================================================================================
+📝 PROMPT: What is instruction tuning?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Colbert",
+    "text": "Instruction tuning is a technique that allows pretrained language models to learn from input and res...",
+    "start": 747.255,
+    "end": 752.935
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Colbert
+   Time: 08:18 - 08:21
+   Text: So our question was, what is instruction tuning?...
+   Score: 0.471
+----------------------------------------
+
+2. Video: Colbert
+   Time: 12:27 - 12:32
+   Text: Instruction tuning is a technique that allows pretrained language models to lear...
+   Score: 0.468
+----------------------------------------
+
+3. Video: Colbert
+   Time: 04:22 - 04:28
+   Text: So I'm asking what is instruction tuning, and then how many chunks I want the mo...
+   Score: 0.457
+----------------------------------------
+
+4. Video: Colbert
+   Time: 08:22 - 08:32
+   Text: And the response is instruction tuning is a technique that allows pretrained lan...
+   Score: 0.443
+----------------------------------------
+
+5. Video: AI
+   Time: 13:47 - 13:59
+   Text: That explicit data structure has knock on effects over there that are really rea...
+   Score: 0.230
+----------------------------------------
+
+6. Video: AI
+   Time: 10:02 - 10:13
+   Text: Graph RAG enables us to answer another important class of questions that we coul...
+   Score: 0.221
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Colbert
+   Time: 12:27 - 12:32
+   Text: Instruction tuning is a technique that allows pretrained language models to lear...
+   Similarity Score: 0.468
+   🎯 Cohere Rerank Score: 0.953
+----------------------------------------
+
+2. Video: Colbert
+   Time: 08:22 - 08:32
+   Text: And the response is instruction tuning is a technique that allows pretrained lan...
+   Similarity Score: 0.443
+   🎯 Cohere Rerank Score: 0.908
+----------------------------------------
+
+3. Video: Colbert
+   Time: 08:18 - 08:21
+   Text: So our question was, what is instruction tuning?...
+   Similarity Score: 0.471
+   🎯 Cohere Rerank Score: 0.706
+----------------------------------------
+
+4. Video: Colbert
+   Time: 04:22 - 04:28
+   Text: So I'm asking what is instruction tuning, and then how many chunks I want the mo...
+   Similarity Score: 0.457
+   🎯 Cohere Rerank Score: 0.475
+----------------------------------------
+
+5. Video: AI
+   Time: 13:08 - 13:15
+   Text: It is explicit, it's deterministic, it's visual, you can see it, you can touch i...
+   Similarity Score: 0.214
+   🎯 Cohere Rerank Score: 0.043
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 0.800 | MRR: 1.000 | Time: 0.27s
+   Cohere - Hit: ✅ | P@5: 0.800 | MRR: 1.000 | Time: 0.50s
+================================================================================
+
+
+🧪 TEST CASE 3/21 | Category: TECHNICAL_DEFINITION
+================================================================================
+📝 PROMPT: What is contextual retrieval?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Contextual Retrieval with Any LLM_ A Step-by-Step Guide",
+    "text": "In a previous video, we looked at contextual retrieval, which is a new chunking strategy from Anthro...",
+    "start": 0.0,
+    "end": 18.265
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 00:00 - 00:18
+   Text: In a previous video, we looked at contextual retrieval, which is a new chunking ...
+   Score: 0.448
+----------------------------------------
+
+2. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 01:15 - 01:40
+   Text: The contextual retrieval system adds a pre processing step in which we take each...
+   Score: 0.437
+----------------------------------------
+
+3. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 12:23 - 12:36
+   Text: And the way we do it is that we're doing a retrieval on the original vector stor...
+   Score: 0.407
+----------------------------------------
+
+4. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 03:27 - 03:41
+   Text: So you first take single document, create chunks out of those, feed those chunks...
+   Score: 0.404
+----------------------------------------
+
+5. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 08:32 - 08:42
+   Text: So this is going to generate the contextualized prompts along with the original ...
+   Score: 0.401
+----------------------------------------
+
+6. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 06:22 - 06:36
+   Text: And then there's another function called generate contextualized chunks, which r...
+   Score: 0.400
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 00:00 - 00:18
+   Text: In a previous video, we looked at contextual retrieval, which is a new chunking ...
+   Similarity Score: 0.448
+   🎯 Cohere Rerank Score: 0.900
+----------------------------------------
+
+2. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 01:15 - 01:40
+   Text: The contextual retrieval system adds a pre processing step in which we take each...
+   Similarity Score: 0.437
+   🎯 Cohere Rerank Score: 0.787
+----------------------------------------
+
+3. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 10:02 - 10:04
+   Text: So CR is the contextual retrieval....
+   Similarity Score: 0.386
+   🎯 Cohere Rerank Score: 0.717
+----------------------------------------
+
+4. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 04:48 - 04:53
+   Text: Now here we created a contextual retrieval class for chunk creation....
+   Similarity Score: 0.383
+   🎯 Cohere Rerank Score: 0.513
+----------------------------------------
+
+5. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 02:08 - 02:19
+   Text: So here's the whole implementation that we are going to explore in this video In...
+   Similarity Score: 0.386
+   🎯 Cohere Rerank Score: 0.504
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.35s
+   Cohere - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.57s
+================================================================================
+
+
+🧪 TEST CASE 4/21 | Category: CONCEPTUAL
+================================================================================
+📝 PROMPT: What is API arbitrage?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "api",
+    "text": "Now, the ability to see gaps and a sort of arbitrage between what an API or other people's code enab...",
+    "start": 46.3,
+    "end": 62.3
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 11:03 - 11:12
+   Text: This is from a a very high growth stage fintech company that is very cutting edg...
+   Score: 0.221
+----------------------------------------
+
+2. Video: AI
+   Time: 11:16 - 11:26
+   Text: And they took an existing application and they said, you know what, we are gonna...
+   Score: 0.209
+----------------------------------------
+
+3. Video: AI
+   Time: 10:02 - 10:13
+   Text: Graph RAG enables us to answer another important class of questions that we coul...
+   Score: 0.208
+----------------------------------------
+
+4. Video: AI
+   Time: 02:10 - 02:16
+   Text: The technology called PageRank that delivers the most important search results r...
+   Score: 0.208
+----------------------------------------
+
+5. Video: AI
+   Time: 02:37 - 02:45
+   Text: That ushered in and created honestly the most valuable company on the planet for...
+   Score: 0.205
+----------------------------------------
+
+6. Video: AI
+   Time: 02:22 - 02:35
+   Text: That technology, PageRank, is actually a graph algorithm, which is actually it's...
+   Score: 0.204
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 01:53 - 01:53
+   Text: Yeah....
+   Similarity Score: 0.195
+   🎯 Cohere Rerank Score: 0.038
+----------------------------------------
+
+2. Video: AI
+   Time: 11:03 - 11:12
+   Text: This is from a a very high growth stage fintech company that is very cutting edg...
+   Similarity Score: 0.221
+   🎯 Cohere Rerank Score: 0.033
+----------------------------------------
+
+3. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:58 - 03:06
+   Text: Blindly on a business which will fetch you a profit, a definite profit in the ne...
+   Similarity Score: 0.197
+   🎯 Cohere Rerank Score: 0.031
+----------------------------------------
+
+4. Video: AI
+   Time: 08:53 - 09:00
+   Text: This is the first one that I know of by data dot world, which is a data catalogi...
+   Similarity Score: 0.197
+   🎯 Cohere Rerank Score: 0.026
+----------------------------------------
+
+5. Video: AI
+   Time: 11:26 - 11:33
+   Text: They can calculate the embeddings on a database level, getting related actions i...
+   Similarity Score: 0.197
+   🎯 Cohere Rerank Score: 0.026
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.26s
+   Cohere - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.54s
+================================================================================
+
+
+🧪 TEST CASE 5/21 | Category: HOW_TO
+================================================================================
+📝 PROMPT: How to do better RAG?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Colbert",
+    "text": "Welcome to another video on how to do better rag....",
+    "start": 0.6,
+    "end": 3.5
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Colbert
+   Time: 00:00 - 00:03
+   Text: Welcome to another video on how to do better rag....
+   Score: 0.333
+----------------------------------------
+
+2. Video: AI
+   Time: 10:26 - 10:34
+   Text: Because what we hear very clearly from our user is that it's easier to build rag...
+   Score: 0.324
+----------------------------------------
+
+3. Video: AI
+   Time: 04:54 - 05:04
+   Text: What I'm gonna talk to you about today is how can you use well, first of all, sh...
+   Score: 0.315
+----------------------------------------
+
+4. Video: AI
+   Time: 11:50 - 11:55
+   Text: Like once you've been able to create that graph, it's a lot easier to build your...
+   Score: 0.307
+----------------------------------------
+
+5. Video: AI
+   Time: 10:02 - 10:13
+   Text: Graph RAG enables us to answer another important class of questions that we coul...
+   Score: 0.300
+----------------------------------------
+
+6. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 14:50 - 14:54
+   Text: But there are some really interesting things happening in the Rag ecosystem....
+   Score: 0.276
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Colbert
+   Time: 00:00 - 00:03
+   Text: Welcome to another video on how to do better rag....
+   Similarity Score: 0.333
+   🎯 Cohere Rerank Score: 0.597
+----------------------------------------
+
+2. Video: AI
+   Time: 11:50 - 11:55
+   Text: Like once you've been able to create that graph, it's a lot easier to build your...
+   Similarity Score: 0.308
+   🎯 Cohere Rerank Score: 0.360
+----------------------------------------
+
+3. Video: AI
+   Time: 10:26 - 10:34
+   Text: Because what we hear very clearly from our user is that it's easier to build rag...
+   Similarity Score: 0.324
+   🎯 Cohere Rerank Score: 0.328
+----------------------------------------
+
+4. Video: AI
+   Time: 05:42 - 05:58
+   Text: And then you are tasked with building a bot that either is gives direct end user...
+   Similarity Score: 0.267
+   🎯 Cohere Rerank Score: 0.284
+----------------------------------------
+
+5. Video: Colbert
+   Time: 05:07 - 05:18
+   Text: Now, in typical Rag, you will pass those on as relevant chunks, plus the query t...
+   Similarity Score: 0.237
+   🎯 Cohere Rerank Score: 0.244
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 0.200 | MRR: 1.000 | Time: 0.27s
+   Cohere - Hit: ✅ | P@5: 0.400 | MRR: 1.000 | Time: 0.91s
+================================================================================
+
+
+🧪 TEST CASE 6/21 | Category: HOW_TO
+================================================================================
+📝 PROMPT: How to build applications better
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "AI",
+    "text": "I basically dedicated my professional life towards getting developers to be able to build better app...",
+    "start": 13.28,
+    "end": 37.010002
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 00:13 - 00:37
+   Text: I basically dedicated my professional life towards getting developers to be able...
+   Score: 0.323
+----------------------------------------
+
+2. Video: AI
+   Time: 12:46 - 12:58
+   Text: One is not better than the other, except I will make one statement, which is whe...
+   Score: 0.261
+----------------------------------------
+
+3. Video: AI
+   Time: 10:26 - 10:34
+   Text: Because what we hear very clearly from our user is that it's easier to build rag...
+   Score: 0.252
+----------------------------------------
+
+4. Video: AI
+   Time: 11:16 - 11:26
+   Text: And they took an existing application and they said, you know what, we are gonna...
+   Score: 0.238
+----------------------------------------
+
+5. Video: AI
+   Time: 13:32 - 13:46
+   Text: It's also showing up for our friends in IT who worry about things maybe that is ...
+   Score: 0.234
+----------------------------------------
+
+6. Video: AI
+   Time: 11:50 - 11:55
+   Text: Like once you've been able to create that graph, it's a lot easier to build your...
+   Score: 0.232
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 00:13 - 00:37
+   Text: I basically dedicated my professional life towards getting developers to be able...
+   Similarity Score: 0.323
+   🎯 Cohere Rerank Score: 0.801
+----------------------------------------
+
+2. Video: AI
+   Time: 10:26 - 10:34
+   Text: Because what we hear very clearly from our user is that it's easier to build rag...
+   Similarity Score: 0.252
+   🎯 Cohere Rerank Score: 0.261
+----------------------------------------
+
+3. Video: AI
+   Time: 12:46 - 12:58
+   Text: One is not better than the other, except I will make one statement, which is whe...
+   Similarity Score: 0.261
+   🎯 Cohere Rerank Score: 0.221
+----------------------------------------
+
+4. Video: AI
+   Time: 14:02 - 14:13
+   Text: So higher accuracy, better answers, easier to build once you're through the hump...
+   Similarity Score: 0.218
+   🎯 Cohere Rerank Score: 0.213
+----------------------------------------
+
+5. Video: AI
+   Time: 11:50 - 11:55
+   Text: Like once you've been able to create that graph, it's a lot easier to build your...
+   Similarity Score: 0.232
+   🎯 Cohere Rerank Score: 0.201
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.26s
+   Cohere - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.57s
+================================================================================
+
+
+🧪 TEST CASE 7/21 | Category: ANALOGY
+================================================================================
+📝 PROMPT: What is the LEGO philosophy for APIs?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "api",
+    "text": "So in API, imagine you're at a party where everyone brings half built LEGO sets....",
+    "start": 74.7,
+    "end": 82.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 00:13 - 00:37
+   Text: I basically dedicated my professional life towards getting developers to be able...
+   Score: 0.248
+----------------------------------------
+
+2. Video: Colbert
+   Time: 06:41 - 06:46
+   Text: So here I set up my API key within Google Colab notebook....
+   Score: 0.240
+----------------------------------------
+
+3. Video: AI
+   Time: 09:25 - 09:36
+   Text: But it also has a great architecture view, so you can take the the QR code right...
+   Score: 0.235
+----------------------------------------
+
+4. Video: AI
+   Time: 02:46 - 02:59
+   Text: That lasted for about a decade, about a dozen years until in 2012, Google wrote ...
+   Score: 0.228
+----------------------------------------
+
+5. Video: AI
+   Time: 05:42 - 05:58
+   Text: And then you are tasked with building a bot that either is gives direct end user...
+   Score: 0.227
+----------------------------------------
+
+6. Video: AI
+   Time: 10:02 - 10:13
+   Text: Graph RAG enables us to answer another important class of questions that we coul...
+   Score: 0.225
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 13:08 - 13:15
+   Text: It is explicit, it's deterministic, it's visual, you can see it, you can touch i...
+   Similarity Score: 0.224
+   🎯 Cohere Rerank Score: 0.114
+----------------------------------------
+
+2. Video: AI
+   Time: 14:02 - 14:13
+   Text: So higher accuracy, better answers, easier to build once you're through the hump...
+   Similarity Score: 0.211
+   🎯 Cohere Rerank Score: 0.045
+----------------------------------------
+
+3. Video: AI
+   Time: 10:26 - 10:34
+   Text: Because what we hear very clearly from our user is that it's easier to build rag...
+   Similarity Score: 0.224
+   🎯 Cohere Rerank Score: 0.041
+----------------------------------------
+
+4. Video: AI
+   Time: 00:13 - 00:37
+   Text: I basically dedicated my professional life towards getting developers to be able...
+   Similarity Score: 0.248
+   🎯 Cohere Rerank Score: 0.039
+----------------------------------------
+
+5. Video: AI
+   Time: 07:26 - 07:30
+   Text: So the core pattern is actually really really simple, but really really powerful...
+   Similarity Score: 0.212
+   🎯 Cohere Rerank Score: 0.036
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.32s
+   Cohere - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.61s
+================================================================================
+
+
+🧪 TEST CASE 8/21 | Category: ANALOGY
+================================================================================
+📝 PROMPT: What analogy is used to explain APIs?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "api",
+    "text": "So in API, imagine you're at a party where everyone brings half built LEGO sets....",
+    "start": 74.7,
+    "end": 82.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 00:13 - 00:37
+   Text: I basically dedicated my professional life towards getting developers to be able...
+   Score: 0.258
+----------------------------------------
+
+2. Video: AI
+   Time: 05:25 - 05:29
+   Text: So let's take the classic example of a customer service bot, right....
+   Score: 0.258
+----------------------------------------
+
+3. Video: AI
+   Time: 12:02 - 12:10
+   Text: Let's say we have the phrase in there, apples and oranges are both fruit, and we...
+   Score: 0.257
+----------------------------------------
+
+4. Video: AI
+   Time: 12:27 - 12:38
+   Text: Two different ways of representing that phrase and then we can run similarity ca...
+   Score: 0.251
+----------------------------------------
+
+5. Video: AI
+   Time: 13:32 - 13:46
+   Text: It's also showing up for our friends in IT who worry about things maybe that is ...
+   Score: 0.245
+----------------------------------------
+
+6. Video: AI
+   Time: 18:14 - 18:18
+   Text: Machine learning, they talk about something that is developed in a similar fashi...
+   Score: 0.241
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 13:08 - 13:15
+   Text: It is explicit, it's deterministic, it's visual, you can see it, you can touch i...
+   Similarity Score: 0.231
+   🎯 Cohere Rerank Score: 0.125
+----------------------------------------
+
+2. Video: AI
+   Time: 18:14 - 18:18
+   Text: Machine learning, they talk about something that is developed in a similar fashi...
+   Similarity Score: 0.241
+   🎯 Cohere Rerank Score: 0.116
+----------------------------------------
+
+3. Video: AI
+   Time: 05:25 - 05:29
+   Text: So let's take the classic example of a customer service bot, right....
+   Similarity Score: 0.258
+   🎯 Cohere Rerank Score: 0.106
+----------------------------------------
+
+4. Video: AI
+   Time: 13:32 - 13:46
+   Text: It's also showing up for our friends in IT who worry about things maybe that is ...
+   Similarity Score: 0.244
+   🎯 Cohere Rerank Score: 0.098
+----------------------------------------
+
+5. Video: AI
+   Time: 11:26 - 11:33
+   Text: They can calculate the embeddings on a database level, getting related actions i...
+   Similarity Score: 0.233
+   🎯 Cohere Rerank Score: 0.091
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.43s
+   Cohere - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 1.22s
+================================================================================
+
+
+🧪 TEST CASE 9/21 | Category: PARAPHRASE
+================================================================================
+📝 PROMPT: Describe the art of using gaps between APIs and customer needs.
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "api",
+    "text": "Now, the ability to see gaps and a sort of arbitrage between what an API or other people's code enab...",
+    "start": 46.3,
+    "end": 62.3
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 05:42 - 05:58
+   Text: And then you are tasked with building a bot that either is gives direct end user...
+   Score: 0.258
+----------------------------------------
+
+2. Video: AI
+   Time: 00:13 - 00:37
+   Text: I basically dedicated my professional life towards getting developers to be able...
+   Score: 0.247
+----------------------------------------
+
+3. Video: AI
+   Time: 15:20 - 15:27
+   Text: The middle one is actually where the majority of at least enterprise production ...
+   Score: 0.227
+----------------------------------------
+
+4. Video: AI
+   Time: 05:25 - 05:29
+   Text: So let's take the classic example of a customer service bot, right....
+   Score: 0.226
+----------------------------------------
+
+5. Video: AI
+   Time: 06:21 - 06:26
+   Text: And it's written by this particular customer service engineer, you know that kin...
+   Score: 0.224
+----------------------------------------
+
+6. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 05:29 - 05:37
+   Text: And at maximum, it can make two retries if it run into any issues when you it's ...
+   Score: 0.222
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 06:21 - 06:26
+   Text: And it's written by this particular customer service engineer, you know that kin...
+   Similarity Score: 0.224
+   🎯 Cohere Rerank Score: 0.189
+----------------------------------------
+
+2. Video: AI
+   Time: 15:20 - 15:27
+   Text: The middle one is actually where the majority of at least enterprise production ...
+   Similarity Score: 0.227
+   🎯 Cohere Rerank Score: 0.154
+----------------------------------------
+
+3. Video: AI
+   Time: 05:25 - 05:29
+   Text: So let's take the classic example of a customer service bot, right....
+   Similarity Score: 0.226
+   🎯 Cohere Rerank Score: 0.091
+----------------------------------------
+
+4. Video: AI
+   Time: 05:42 - 05:58
+   Text: And then you are tasked with building a bot that either is gives direct end user...
+   Similarity Score: 0.258
+   🎯 Cohere Rerank Score: 0.072
+----------------------------------------
+
+5. Video: AI
+   Time: 12:46 - 12:58
+   Text: One is not better than the other, except I will make one statement, which is whe...
+   Similarity Score: 0.208
+   🎯 Cohere Rerank Score: 0.064
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.32s
+   Cohere - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.60s
+================================================================================
+
+
+🧪 TEST CASE 10/21 | Category: PARAPHRASE
+================================================================================
+📝 PROMPT: Explain the main pattern for data applications in simple terms.
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "AI",
+    "text": "So the core pattern is actually really really simple, but really really powerful....",
+    "start": 446.1,
+    "end": 451.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 07:26 - 07:30
+   Text: So the core pattern is actually really really simple, but really really powerful...
+   Score: 0.291
+----------------------------------------
+
+2. Video: AI
+   Time: 00:13 - 00:37
+   Text: I basically dedicated my professional life towards getting developers to be able...
+   Score: 0.251
+----------------------------------------
+
+3. Video: AI
+   Time: 15:02 - 15:09
+   Text: It's very easy to go from Snowflake or Postgres or MySQL or Oracle into a proper...
+   Score: 0.240
+----------------------------------------
+
+4. Video: AI
+   Time: 11:16 - 11:26
+   Text: And they took an existing application and they said, you know what, we are gonna...
+   Score: 0.234
+----------------------------------------
+
+5. Video: AI
+   Time: 13:47 - 13:59
+   Text: That explicit data structure has knock on effects over there that are really rea...
+   Score: 0.229
+----------------------------------------
+
+6. Video: AI
+   Time: 07:36 - 07:40
+   Text: It's of course not a primary, but almost like a primary key lookup into the grap...
+   Score: 0.224
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 07:26 - 07:30
+   Text: So the core pattern is actually really really simple, but really really powerful...
+   Similarity Score: 0.291
+   🎯 Cohere Rerank Score: 0.373
+----------------------------------------
+
+2. Video: AI
+   Time: 08:12 - 08:18
+   Text: And then there's a number more advanced patterns, but that's kind of the next ne...
+   Similarity Score: 0.218
+   🎯 Cohere Rerank Score: 0.130
+----------------------------------------
+
+3. Video: AI
+   Time: 14:51 - 14:57
+   Text: But basically what this one is is structured data where some of the fields are l...
+   Similarity Score: 0.221
+   🎯 Cohere Rerank Score: 0.094
+----------------------------------------
+
+4. Video: AI
+   Time: 08:18 - 08:21
+   Text: The like the it's more sophisticated graph retrieval patterns....
+   Similarity Score: 0.220
+   🎯 Cohere Rerank Score: 0.090
+----------------------------------------
+
+5. Video: AI
+   Time: 00:13 - 00:37
+   Text: I basically dedicated my professional life towards getting developers to be able...
+   Similarity Score: 0.251
+   🎯 Cohere Rerank Score: 0.079
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.32s
+   Cohere - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.58s
+================================================================================
+
+
+🧪 TEST CASE 11/21 | Category: TOOL_FEATURE
+================================================================================
+📝 PROMPT: What is thumbnail search?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "How I Get Over 100,000,000 Views Per Video",
+    "text": "It's called thumbnail search, and you can type in whatever you want, and it will pull up thumbnails ...",
+    "start": 247.0,
+    "end": 255.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:59 - 05:06
+   Text: And if you're ever on YouTube and you see a thumbnail you like, you can just cop...
+   Score: 0.271
+----------------------------------------
+
+2. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:07 - 04:12
+   Text: It's called thumbnail search, and you can type in whatever you want, and it will...
+   Score: 0.266
+----------------------------------------
+
+3. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:37 - 04:40
+   Text: And so what I'm gonna do is I'm gonna hit search by thumbnail....
+   Score: 0.252
+----------------------------------------
+
+4. Video: AI
+   Time: 01:27 - 01:40
+   Text: And the Alta effect kicked in, which was the notion that you search for somethin...
+   Score: 0.248
+----------------------------------------
+
+5. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 05:19 - 05:24
+   Text: You upload a couple thumbnail options, YouTube tests them all out, and it tells ...
+   Score: 0.245
+----------------------------------------
+
+6. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:29 - 04:33
+   Text: This will show you every thumbnail on YouTube that has a person standing next to...
+   Score: 0.243
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+Error during Cohere reranking: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': '7e61494519549c18dd4484e77c0b0b90', 'date': 'Sat, 02 Aug 2025 09:41:41 GMT', 'content-length': '372', 'x-envoy-upstream-service-time': '11', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 429, body: {'id': 'c75ac458-495e-4105-b23f-a8db4e6d2903', 'message': "You are using a Trial key, which is limited to 10 API calls / minute. You can continue to use the Trial key for free or upgrade to a Production key with higher rate limits at 'https://dashboard.cohere.com/api-keys'. Contact us on 'https://discord.gg/XW44jPfYJu' or email us at support@cohere.com with any questions"}
+1. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:59 - 05:06
+   Text: And if you're ever on YouTube and you see a thumbnail you like, you can just cop...
+   Similarity Score: 0.271
+----------------------------------------
+
+2. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:07 - 04:12
+   Text: It's called thumbnail search, and you can type in whatever you want, and it will...
+   Similarity Score: 0.266
+----------------------------------------
+
+3. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:37 - 04:40
+   Text: And so what I'm gonna do is I'm gonna hit search by thumbnail....
+   Similarity Score: 0.252
+----------------------------------------
+
+4. Video: AI
+   Time: 01:27 - 01:40
+   Text: And the Alta effect kicked in, which was the notion that you search for somethin...
+   Similarity Score: 0.248
+----------------------------------------
+
+5. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 05:19 - 05:24
+   Text: You upload a couple thumbnail options, YouTube tests them all out, and it tells ...
+   Similarity Score: 0.245
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 0.800 | MRR: 1.000 | Time: 0.26s
+   Cohere - Hit: ✅ | P@5: 0.800 | MRR: 1.000 | Time: 0.46s
+================================================================================
+
+
+🧪 TEST CASE 12/21 | Category: TOOL_FEATURE
+================================================================================
+📝 PROMPT: What is video ranking?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "How I Get Over 100,000,000 Views Per Video",
+    "text": "You can hit ranking and see what it ranked out of 10 when I uploaded it....",
+    "start": 156.6,
+    "end": 162.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:17 - 01:21
+   Text: But now you can see any video on all of YouTube when it ranks out of 10, which I...
+   Score: 0.300
+----------------------------------------
+
+2. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 03:05 - 03:15
+   Text: And what outlier means is if you have a channel with, let's say, 10,000 subscrib...
+   Score: 0.294
+----------------------------------------
+
+3. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:07 - 04:12
+   Text: It's called thumbnail search, and you can type in whatever you want, and it will...
+   Score: 0.292
+----------------------------------------
+
+4. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 05:19 - 05:24
+   Text: You upload a couple thumbnail options, YouTube tests them all out, and it tells ...
+   Score: 0.284
+----------------------------------------
+
+5. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:10 - 01:17
+   Text: So without view stats, if you wanted to see out of 10 how well a video performed...
+   Score: 0.281
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+Error during Cohere reranking: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': '66dd1eac252bdb15466ab339e690e186', 'date': 'Sat, 02 Aug 2025 09:41:41 GMT', 'content-length': '372', 'x-envoy-upstream-service-time': '9', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 429, body: {'id': 'a1e154dc-a423-4615-86e4-e399529c62a3', 'message': "You are using a Trial key, which is limited to 10 API calls / minute. You can continue to use the Trial key for free or upgrade to a Production key with higher rate limits at 'https://dashboard.cohere.com/api-keys'. Contact us on 'https://discord.gg/XW44jPfYJu' or email us at support@cohere.com with any questions"}
+1. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:17 - 01:21
+   Text: But now you can see any video on all of YouTube when it ranks out of 10, which I...
+   Similarity Score: 0.300
+----------------------------------------
+
+2. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 03:05 - 03:15
+   Text: And what outlier means is if you have a channel with, let's say, 10,000 subscrib...
+   Similarity Score: 0.294
+----------------------------------------
+
+3. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 04:07 - 04:12
+   Text: It's called thumbnail search, and you can type in whatever you want, and it will...
+   Similarity Score: 0.292
+----------------------------------------
+
+4. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 05:19 - 05:24
+   Text: You upload a couple thumbnail options, YouTube tests them all out, and it tells ...
+   Similarity Score: 0.284
+----------------------------------------
+
+5. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:10 - 01:17
+   Text: So without view stats, if you wanted to see out of 10 how well a video performed...
+   Similarity Score: 0.281
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.26s
+   Cohere - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.50s
+================================================================================
+
+
+🧪 TEST CASE 13/21 | Category: BUSINESS_ADVICE
+================================================================================
+📝 PROMPT: How to become a businessman?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Nikhil Kamath_ My Honest Business Advice",
+    "text": "When I actively wanted to become a businessman....",
+    "start": 1.4,
+    "end": 8.7
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 00:01 - 00:07
+   Text: When I actively wanted to become a businessman....
+   Score: 0.294
+----------------------------------------
+
+2. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:22 - 01:25
+   Text: The more boring your business, the likelihood of you making money is higher....
+   Score: 0.250
+----------------------------------------
+
+3. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:58 - 03:06
+   Text: Blindly on a business which will fetch you a profit, a definite profit in the ne...
+   Score: 0.246
+----------------------------------------
+
+4. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 00:56 - 01:02
+   Text: Because of the whim of owning a restaurant You should enter for the right reason...
+   Score: 0.245
+----------------------------------------
+
+5. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:03 - 01:08
+   Text: Is I the right mean, I feel like you have to be passionate and all in....
+   Score: 0.245
+----------------------------------------
+
+6. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 04:05 - 04:09
+   Text: You don't even need to create a brand, you need to create an efficient system pr...
+   Score: 0.244
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+Error during Cohere reranking: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': 'd343ead6a382e62040b20bb7b173fa82', 'date': 'Sat, 02 Aug 2025 09:41:42 GMT', 'content-length': '372', 'x-envoy-upstream-service-time': '8', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 429, body: {'id': '7d29591b-9e89-4313-85ac-14a28b98837f', 'message': "You are using a Trial key, which is limited to 10 API calls / minute. You can continue to use the Trial key for free or upgrade to a Production key with higher rate limits at 'https://dashboard.cohere.com/api-keys'. Contact us on 'https://discord.gg/XW44jPfYJu' or email us at support@cohere.com with any questions"}
+1. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 00:01 - 00:07
+   Text: When I actively wanted to become a businessman....
+   Similarity Score: 0.294
+----------------------------------------
+
+2. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:22 - 01:25
+   Text: The more boring your business, the likelihood of you making money is higher....
+   Similarity Score: 0.250
+----------------------------------------
+
+3. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:58 - 03:06
+   Text: Blindly on a business which will fetch you a profit, a definite profit in the ne...
+   Similarity Score: 0.246
+----------------------------------------
+
+4. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 00:56 - 01:02
+   Text: Because of the whim of owning a restaurant You should enter for the right reason...
+   Similarity Score: 0.245
+----------------------------------------
+
+5. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:03 - 01:08
+   Text: Is I the right mean, I feel like you have to be passionate and all in....
+   Similarity Score: 0.245
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.27s
+   Cohere - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.47s
+================================================================================
+
+
+🧪 TEST CASE 14/21 | Category: BUSINESS_STRATEGY
+================================================================================
+📝 PROMPT: What are profitable SaaS strategies?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "api",
+    "text": "So the most profitable founders I know, they treat APIs and accessing other people's code like attac...",
+    "start": 433.6,
+    "end": 445.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:58 - 03:06
+   Text: Blindly on a business which will fetch you a profit, a definite profit in the ne...
+   Score: 0.234
+----------------------------------------
+
+2. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 12:56 - 13:11
+   Text: Now based on these original chunks, I think it has enough information that it ca...
+   Score: 0.225
+----------------------------------------
+
+3. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:09 - 01:21
+   Text: You can't think that If your outcome is money, you will statistically do better ...
+   Score: 0.224
+----------------------------------------
+
+4. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 00:24 - 00:26
+   Text: Nobody who puts money into movies generally makes money....
+   Score: 0.222
+----------------------------------------
+
+5. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 00:42 - 00:45
+   Text: Restaurants are There are people who are making money in movies, so Exactly....
+   Score: 0.222
+----------------------------------------
+
+6. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 04:05 - 04:09
+   Text: You don't even need to create a brand, you need to create an efficient system pr...
+   Score: 0.222
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+Error during Cohere reranking: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': 'b652370184298a417151e852d8467f28', 'date': 'Sat, 02 Aug 2025 09:41:43 GMT', 'content-length': '372', 'x-envoy-upstream-service-time': '8', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 429, body: {'id': 'd15a64f2-a928-4ca4-8607-9e4ab813d473', 'message': "You are using a Trial key, which is limited to 10 API calls / minute. You can continue to use the Trial key for free or upgrade to a Production key with higher rate limits at 'https://dashboard.cohere.com/api-keys'. Contact us on 'https://discord.gg/XW44jPfYJu' or email us at support@cohere.com with any questions"}
+1. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:58 - 03:06
+   Text: Blindly on a business which will fetch you a profit, a definite profit in the ne...
+   Similarity Score: 0.234
+----------------------------------------
+
+2. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 12:56 - 13:11
+   Text: Now based on these original chunks, I think it has enough information that it ca...
+   Similarity Score: 0.225
+----------------------------------------
+
+3. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:09 - 01:21
+   Text: You can't think that If your outcome is money, you will statistically do better ...
+   Similarity Score: 0.224
+----------------------------------------
+
+4. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 00:24 - 00:26
+   Text: Nobody who puts money into movies generally makes money....
+   Similarity Score: 0.222
+----------------------------------------
+
+5. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 00:42 - 00:45
+   Text: Restaurants are There are people who are making money in movies, so Exactly....
+   Similarity Score: 0.222
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.27s
+   Cohere - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.54s
+================================================================================
+
+
+🧪 TEST CASE 15/21 | Category: BUSINESS_ADVICE
+================================================================================
+📝 PROMPT: How to create a brand?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Nikhil Kamath_ My Honest Business Advice",
+    "text": "It was not the other way around that, Let me create a brand and now let me find out what brand to cr...",
+    "start": 131.1,
+    "end": 140.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 04:05 - 04:09
+   Text: You don't even need to create a brand, you need to create an efficient system pr...
+   Score: 0.340
+----------------------------------------
+
+2. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:11 - 02:15
+   Text: It was not the other way around that, Let me create a brand and now let me find ...
+   Score: 0.317
+----------------------------------------
+
+3. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:55 - 01:58
+   Text: I didn't really think, I'll start a brand or I'll start something....
+   Score: 0.272
+----------------------------------------
+
+4. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:07 - 02:11
+   Text: I am so interested in it that, Okay, let me see if I can create a brand....
+   Score: 0.265
+----------------------------------------
+
+5. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:02 - 02:03
+   Text: I am really passionate about skin care....
+   Score: 0.211
+----------------------------------------
+
+6. Video: AI
+   Time: 10:42 - 10:47
+   Text: So there's a learning curve where people need to learn, how do I create the know...
+   Score: 0.210
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+Error during Cohere reranking: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': '80dbb8758158f53438ee743d17a5f7b7', 'date': 'Sat, 02 Aug 2025 09:41:44 GMT', 'content-length': '372', 'x-envoy-upstream-service-time': '10', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 429, body: {'id': '9c15e5d6-948a-4334-a5e0-cf6e344cf2af', 'message': "You are using a Trial key, which is limited to 10 API calls / minute. You can continue to use the Trial key for free or upgrade to a Production key with higher rate limits at 'https://dashboard.cohere.com/api-keys'. Contact us on 'https://discord.gg/XW44jPfYJu' or email us at support@cohere.com with any questions"}
+1. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 04:05 - 04:09
+   Text: You don't even need to create a brand, you need to create an efficient system pr...
+   Similarity Score: 0.340
+----------------------------------------
+
+2. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:11 - 02:15
+   Text: It was not the other way around that, Let me create a brand and now let me find ...
+   Similarity Score: 0.317
+----------------------------------------
+
+3. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 01:55 - 01:58
+   Text: I didn't really think, I'll start a brand or I'll start something....
+   Similarity Score: 0.272
+----------------------------------------
+
+4. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:07 - 02:11
+   Text: I am so interested in it that, Okay, let me see if I can create a brand....
+   Similarity Score: 0.265
+----------------------------------------
+
+5. Video: Nikhil Kamath_ My Honest Business Advice
+   Time: 02:02 - 02:03
+   Text: I am really passionate about skin care....
+   Similarity Score: 0.211
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.28s
+   Cohere - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.60s
+================================================================================
+
+
+🧪 TEST CASE 16/21 | Category: TECHNICAL_PROCESS
+================================================================================
+📝 PROMPT: How does contextual chunking work?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Contextual Retrieval with Any LLM_ A Step-by-Step Guide",
+    "text": "The contextual retrieval system adds a pre processing step in which we take each chunk, feed that in...",
+    "start": 76.0,
+    "end": 95.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 00:00 - 00:18
+   Text: In a previous video, we looked at contextual retrieval, which is a new chunking ...
+   Score: 0.410
+----------------------------------------
+
+2. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 06:22 - 06:36
+   Text: And then there's another function called generate contextualized chunks, which r...
+   Score: 0.407
+----------------------------------------
+
+3. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 04:48 - 04:53
+   Text: Now here we created a contextual retrieval class for chunk creation....
+   Score: 0.402
+----------------------------------------
+
+4. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 06:37 - 06:41
+   Text: So let's look at how this contextualized chunks works....
+   Score: 0.398
+----------------------------------------
+
+5. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 03:27 - 03:41
+   Text: So you first take single document, create chunks out of those, feed those chunks...
+   Score: 0.380
+----------------------------------------
+
+6. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 02:51 - 03:07
+   Text: So let's say you have a PDF file, you create chunks out of that PDF file, then y...
+   Score: 0.375
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+Error during Cohere reranking: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': '5b896ba0e44c0dd165c03d3be500f79b', 'date': 'Sat, 02 Aug 2025 09:41:45 GMT', 'content-length': '372', 'x-envoy-upstream-service-time': '12', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 429, body: {'id': 'dc2ce5a1-c76b-4821-8ec1-2cd8c4017040', 'message': "You are using a Trial key, which is limited to 10 API calls / minute. You can continue to use the Trial key for free or upgrade to a Production key with higher rate limits at 'https://dashboard.cohere.com/api-keys'. Contact us on 'https://discord.gg/XW44jPfYJu' or email us at support@cohere.com with any questions"}
+1. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 00:00 - 00:18
+   Text: In a previous video, we looked at contextual retrieval, which is a new chunking ...
+   Similarity Score: 0.410
+----------------------------------------
+
+2. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 06:22 - 06:36
+   Text: And then there's another function called generate contextualized chunks, which r...
+   Similarity Score: 0.407
+----------------------------------------
+
+3. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 04:48 - 04:53
+   Text: Now here we created a contextual retrieval class for chunk creation....
+   Similarity Score: 0.402
+----------------------------------------
+
+4. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 06:37 - 06:41
+   Text: So let's look at how this contextualized chunks works....
+   Similarity Score: 0.398
+----------------------------------------
+
+5. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 03:27 - 03:41
+   Text: So you first take single document, create chunks out of those, feed those chunks...
+   Similarity Score: 0.380
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.32s
+   Cohere - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.60s
+================================================================================
+
+
+🧪 TEST CASE 17/21 | Category: TECHNICAL_PROCESS
+================================================================================
+📝 PROMPT: How to create knowledge graphs?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "AI",
+    "text": "But how do you create that knowledge graph?...",
+    "start": 650.3,
+    "end": 653.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 10:42 - 10:47
+   Text: So there's a learning curve where people need to learn, how do I create the know...
+   Score: 0.412
+----------------------------------------
+
+2. Video: AI
+   Time: 14:21 - 14:24
+   Text: Like how do you create the knowledge graph in the first place?...
+   Score: 0.405
+----------------------------------------
+
+3. Video: AI
+   Time: 10:50 - 10:52
+   Text: But how do you create that knowledge graph?...
+   Score: 0.401
+----------------------------------------
+
+4. Video: AI
+   Time: 14:26 - 14:32
+   Text: So basically there are three types of data out in the world that I care about wh...
+   Score: 0.395
+----------------------------------------
+
+5. Video: AI
+   Time: 15:47 - 15:53
+   Text: So we just built this new tool that we launched just a few weeks ago called the ...
+   Score: 0.389
+----------------------------------------
+
+6. Video: AI
+   Time: 03:20 - 03:23
+   Text: And we all know what the knowledge graph looks like visually....
+   Score: 0.344
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+Error during Cohere reranking: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': 'f2a9c9f866c2aec352902be67b62970b', 'date': 'Sat, 02 Aug 2025 09:41:45 GMT', 'content-length': '372', 'x-envoy-upstream-service-time': '10', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 429, body: {'id': '6582392e-a775-435d-a8df-6ccf03e15f12', 'message': "You are using a Trial key, which is limited to 10 API calls / minute. You can continue to use the Trial key for free or upgrade to a Production key with higher rate limits at 'https://dashboard.cohere.com/api-keys'. Contact us on 'https://discord.gg/XW44jPfYJu' or email us at support@cohere.com with any questions"}
+1. Video: AI
+   Time: 10:42 - 10:47
+   Text: So there's a learning curve where people need to learn, how do I create the know...
+   Similarity Score: 0.412
+----------------------------------------
+
+2. Video: AI
+   Time: 14:21 - 14:24
+   Text: Like how do you create the knowledge graph in the first place?...
+   Similarity Score: 0.405
+----------------------------------------
+
+3. Video: AI
+   Time: 10:50 - 10:52
+   Text: But how do you create that knowledge graph?...
+   Similarity Score: 0.401
+----------------------------------------
+
+4. Video: AI
+   Time: 14:26 - 14:32
+   Text: So basically there are three types of data out in the world that I care about wh...
+   Similarity Score: 0.395
+----------------------------------------
+
+5. Video: AI
+   Time: 15:47 - 15:53
+   Text: So we just built this new tool that we launched just a few weeks ago called the ...
+   Similarity Score: 0.389
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.31s
+   Cohere - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.50s
+================================================================================
+
+
+🧪 TEST CASE 18/21 | Category: INFERENCE
+================================================================================
+📝 PROMPT: Which video would help a beginner learn about YouTube growth?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "How I Get Over 100,000,000 Views Per Video",
+    "text": "In this video, I'm gonna be showing you how you can get access to all my YouTube secrets. Everything...",
+    "start": 0.0,
+    "end": 4.2
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 05:24 - 05:44
+   Text: And why I think this tool would be valuable for you guys is instead of you havin...
+   Score: 0.296
+----------------------------------------
+
+2. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:50 - 01:54
+   Text: And what it will show you in real time is the most subscribed to YouTube channel...
+   Score: 0.277
+----------------------------------------
+
+3. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 03:05 - 03:15
+   Text: And what outlier means is if you have a channel with, let's say, 10,000 subscrib...
+   Score: 0.276
+----------------------------------------
+
+4. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 06:34 - 06:40
+   Text: So this is an example how Ryan could have looked at my AB thumbnail test, saw wh...
+   Score: 0.274
+----------------------------------------
+
+5. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 05:49 - 05:53
+   Text: And this will show you all the most recent AB thumbnail tests ran on Minecraft c...
+   Score: 0.274
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+Error during Cohere reranking: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': 'e28f6177bfc9ca8e5726c2c8e1a139a5', 'date': 'Sat, 02 Aug 2025 09:41:46 GMT', 'content-length': '372', 'x-envoy-upstream-service-time': '11', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 429, body: {'id': 'eb708cf4-6bab-437a-9438-b09540686f51', 'message': "You are using a Trial key, which is limited to 10 API calls / minute. You can continue to use the Trial key for free or upgrade to a Production key with higher rate limits at 'https://dashboard.cohere.com/api-keys'. Contact us on 'https://discord.gg/XW44jPfYJu' or email us at support@cohere.com with any questions"}
+1. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 05:24 - 05:44
+   Text: And why I think this tool would be valuable for you guys is instead of you havin...
+   Similarity Score: 0.296
+----------------------------------------
+
+2. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 01:50 - 01:54
+   Text: And what it will show you in real time is the most subscribed to YouTube channel...
+   Similarity Score: 0.277
+----------------------------------------
+
+3. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 03:05 - 03:15
+   Text: And what outlier means is if you have a channel with, let's say, 10,000 subscrib...
+   Similarity Score: 0.276
+----------------------------------------
+
+4. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 06:34 - 06:40
+   Text: So this is an example how Ryan could have looked at my AB thumbnail test, saw wh...
+   Similarity Score: 0.274
+----------------------------------------
+
+5. Video: How I Get Over 100,000,000 Views Per Video
+   Time: 05:49 - 05:53
+   Text: And this will show you all the most recent AB thumbnail tests ran on Minecraft c...
+   Similarity Score: 0.274
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.44s
+   Cohere - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.59s
+================================================================================
+
+
+🧪 TEST CASE 19/21 | Category: HISTORICAL_CONTEXT
+================================================================================
+📝 PROMPT: What happened before Google search?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "AI",
+    "text": "Everyone here in this room knows that the vast majority of web searches today are handled with Googl...",
+    "start": 49.3,
+    "end": 58.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 01:06 - 01:15
+   Text: Back in the mid nineties, there was dozens of web search company, dozens plural,...
+   Score: 0.287
+----------------------------------------
+
+2. Video: AI
+   Time: 01:43 - 01:53
+   Text: That wasn't a problem in the beginning because most of the things you search for...
+   Score: 0.271
+----------------------------------------
+
+3. Video: AI
+   Time: 02:46 - 02:59
+   Text: That lasted for about a decade, about a dozen years until in 2012, Google wrote ...
+   Score: 0.265
+----------------------------------------
+
+4. Video: AI
+   Time: 01:27 - 01:40
+   Text: And the Alta effect kicked in, which was the notion that you search for somethin...
+   Score: 0.263
+----------------------------------------
+
+5. Video: AI
+   Time: 02:22 - 02:35
+   Text: That technology, PageRank, is actually a graph algorithm, which is actually it's...
+   Score: 0.262
+----------------------------------------
+
+6. Video: AI
+   Time: 04:48 - 04:53
+   Text: This is ushering in the next era of web search, the Graph Rack era....
+   Score: 0.252
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+Error during Cohere reranking: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': 'cea6e5c14a638b5f049250caeec08b51', 'date': 'Sat, 02 Aug 2025 09:41:47 GMT', 'content-length': '372', 'x-envoy-upstream-service-time': '12', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 429, body: {'id': '4cca3072-fcd3-4f0c-9835-bfab89c61451', 'message': "You are using a Trial key, which is limited to 10 API calls / minute. You can continue to use the Trial key for free or upgrade to a Production key with higher rate limits at 'https://dashboard.cohere.com/api-keys'. Contact us on 'https://discord.gg/XW44jPfYJu' or email us at support@cohere.com with any questions"}
+1. Video: AI
+   Time: 01:06 - 01:15
+   Text: Back in the mid nineties, there was dozens of web search company, dozens plural,...
+   Similarity Score: 0.287
+----------------------------------------
+
+2. Video: AI
+   Time: 01:43 - 01:53
+   Text: That wasn't a problem in the beginning because most of the things you search for...
+   Similarity Score: 0.271
+----------------------------------------
+
+3. Video: AI
+   Time: 02:46 - 02:59
+   Text: That lasted for about a decade, about a dozen years until in 2012, Google wrote ...
+   Similarity Score: 0.265
+----------------------------------------
+
+4. Video: AI
+   Time: 01:27 - 01:40
+   Text: And the Alta effect kicked in, which was the notion that you search for somethin...
+   Similarity Score: 0.263
+----------------------------------------
+
+5. Video: AI
+   Time: 02:22 - 02:35
+   Text: That technology, PageRank, is actually a graph algorithm, which is actually it's...
+   Similarity Score: 0.262
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.31s
+   Cohere - Hit: ✅ | P@5: 1.000 | MRR: 1.000 | Time: 0.61s
+================================================================================
+
+
+🧪 TEST CASE 20/21 | Category: DOMAIN_SPECIFIC
+================================================================================
+📝 PROMPT: What are ultradian cycles?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "Exploring VideoDB for Efficient Video Chunking and Embedding-2",
+    "text": "So if I type something like what is the best ultradian cycle time....",
+    "start": 60.9,
+    "end": 65.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 05:29 - 05:35
+   Text: They run lab tests twice a year to track over a 100 biomarkers and monitor for e...
+   Score: 0.203
+----------------------------------------
+
+2. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 05:35 - 05:42
+   Text: They even screen for 50 types of cancer at stage one, which is five times more d...
+   Score: 0.199
+----------------------------------------
+
+3. Video: AI
+   Time: 07:26 - 07:30
+   Text: So the core pattern is actually really really simple, but really really powerful...
+   Score: 0.194
+----------------------------------------
+
+4. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 05:20 - 05:29
+   Text: In other news, this episode is brought to you by Staying on top of your health r...
+   Score: 0.194
+----------------------------------------
+
+5. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 05:50 - 06:05
+   Text: Getting these lab tests done would usually cost thousands, but with function, it...
+   Score: 0.192
+----------------------------------------
+
+6. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 04:40 - 04:43
+   Text: They they'll keep you running on that treadmill forever....
+   Score: 0.191
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+Error during Cohere reranking: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': '396f3130d898dd6126d47cd4d63f94f3', 'date': 'Sat, 02 Aug 2025 09:41:48 GMT', 'content-length': '372', 'x-envoy-upstream-service-time': '9', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 429, body: {'id': 'c0965aa6-54b5-46f1-8343-243d8f4572ac', 'message': "You are using a Trial key, which is limited to 10 API calls / minute. You can continue to use the Trial key for free or upgrade to a Production key with higher rate limits at 'https://dashboard.cohere.com/api-keys'. Contact us on 'https://discord.gg/XW44jPfYJu' or email us at support@cohere.com with any questions"}
+1. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 05:29 - 05:35
+   Text: They run lab tests twice a year to track over a 100 biomarkers and monitor for e...
+   Similarity Score: 0.203
+----------------------------------------
+
+2. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 05:35 - 05:42
+   Text: They even screen for 50 types of cancer at stage one, which is five times more d...
+   Similarity Score: 0.199
+----------------------------------------
+
+3. Video: AI
+   Time: 07:26 - 07:30
+   Text: So the core pattern is actually really really simple, but really really powerful...
+   Similarity Score: 0.194
+----------------------------------------
+
+4. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 05:20 - 05:29
+   Text: In other news, this episode is brought to you by Staying on top of your health r...
+   Similarity Score: 0.194
+----------------------------------------
+
+5. Video: “It’s Never Been Easier To Make Money” - Naval Ravikant
+   Time: 05:50 - 06:05
+   Text: Getting these lab tests done would usually cost thousands, but with function, it...
+   Similarity Score: 0.192
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.33s
+   Cohere - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.60s
+================================================================================
+
+
+🧪 TEST CASE 21/21 | Category: TECHNICAL_IMPLEMENTATION
+================================================================================
+📝 PROMPT: How to use OpenAI for chatbots?
+
+📋 EXPECTED DOCUMENT:
+[
+  {
+    "video_name": "api",
+    "text": "So like, you know, you would feed ChatGPT, and there's hundreds of different tutorials, guys, on how...",
+    "start": 737.7,
+    "end": 750.0
+  }
+]
+
+🔍 BASIC SEARCH RESULTS:
+------------------------------------------------------------
+
+1. Video: AI
+   Time: 05:42 - 05:58
+   Text: And then you are tasked with building a bot that either is gives direct end user...
+   Score: 0.360
+----------------------------------------
+
+2. Video: Colbert
+   Time: 06:46 - 06:58
+   Text: So I activated that, and basically I'm retrieving that and passing it on to this...
+   Score: 0.349
+----------------------------------------
+
+3. Video: Colbert
+   Time: 06:20 - 06:28
+   Text: So it it's used it's an internal embedding model, not like an OpenAI or any othe...
+   Score: 0.337
+----------------------------------------
+
+4. Video: AI
+   Time: 16:17 - 16:26
+   Text: I added the Wikipedia page for OpenAI, and I added the YouTube from Swix and Ale...
+   Score: 0.334
+----------------------------------------
+
+5. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 04:16 - 04:24
+   Text: OpenAI is going to be used for the LLM and the embedding model, but you can repl...
+   Score: 0.330
+----------------------------------------
+
+6. Video: AI
+   Time: 18:31 - 18:37
+   Text: There's a chat bot in here that you can use and you can introspect the result th...
+   Score: 0.323
+----------------------------------------
+
+🎯 COHERE RERANKED SEARCH RESULTS:
+------------------------------------------------------------
+
+Error during Cohere reranking: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': '796277da3a53dead7b7367eee8e65efd', 'date': 'Sat, 02 Aug 2025 09:41:49 GMT', 'content-length': '372', 'x-envoy-upstream-service-time': '10', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 429, body: {'id': 'da56a7c9-76cb-41a3-b5fc-e088d3acee8b', 'message': "You are using a Trial key, which is limited to 10 API calls / minute. You can continue to use the Trial key for free or upgrade to a Production key with higher rate limits at 'https://dashboard.cohere.com/api-keys'. Contact us on 'https://discord.gg/XW44jPfYJu' or email us at support@cohere.com with any questions"}
+1. Video: AI
+   Time: 05:42 - 05:58
+   Text: And then you are tasked with building a bot that either is gives direct end user...
+   Similarity Score: 0.360
+----------------------------------------
+
+2. Video: Colbert
+   Time: 06:46 - 06:58
+   Text: So I activated that, and basically I'm retrieving that and passing it on to this...
+   Similarity Score: 0.349
+----------------------------------------
+
+3. Video: Colbert
+   Time: 06:20 - 06:28
+   Text: So it it's used it's an internal embedding model, not like an OpenAI or any othe...
+   Similarity Score: 0.337
+----------------------------------------
+
+4. Video: AI
+   Time: 16:17 - 16:26
+   Text: I added the Wikipedia page for OpenAI, and I added the YouTube from Swix and Ale...
+   Similarity Score: 0.334
+----------------------------------------
+
+5. Video: Contextual Retrieval with Any LLM_ A Step-by-Step Guide
+   Time: 04:16 - 04:24
+   Text: OpenAI is going to be used for the LLM and the embedding model, but you can repl...
+   Similarity Score: 0.330
+----------------------------------------
+
+📊 IMMEDIATE COMPARISON:
+   Basic  - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.31s
+   Cohere - Hit: ❌ | P@5: 0.000 | MRR: 0.000 | Time: 0.60s
+================================================================================
+
+
+🎯 COMPREHENSIVE EVALUATION RESULTS
+====================================================================================================
+📈 OVERALL RETRIEVAL PERFORMANCE:
+                    │   Basic    │  Cohere    │ Improvement
+   ─────────────────┼────────────┼────────────┼─────────────
+   Hit Rate         │     61.9%   │     61.9%   │     +0.0%
+   Precision@5      │      0.562   │      0.571   │     +0.010
+   Recall@5         │      2.810   │      2.857   │     +0.048
+   Mean Reciprocal  │      0.619   │      0.619   │     +0.000
+   Rank (MRR)       │            │            │
+
+📊 CATEGORY-WISE PERFORMANCE:
+   Category             │  Basic  │ Cohere  │ Improvement
+   ─────────────────────┼─────────┼─────────┼─────────────
+   domain_specific      │    0.0%  │    0.0%  │     +0.0%
+   analogy              │    0.0%  │    0.0%  │     +0.0%
+   business_advice      │  100.0%  │  100.0%  │     +0.0%
+   technical_implementation │    0.0%  │    0.0%  │     +0.0%
+   technical_definition │  100.0%  │  100.0%  │     +0.0%
+   how_to               │  100.0%  │  100.0%  │     +0.0%
+   inference            │  100.0%  │  100.0%  │     +0.0%
+   paraphrase           │   50.0%  │   50.0%  │     +0.0%
+   historical_context   │  100.0%  │  100.0%  │     +0.0%
+   conceptual           │    0.0%  │    0.0%  │     +0.0%
+   business_strategy    │    0.0%  │    0.0%  │     +0.0%
+   tool_feature         │  100.0%  │  100.0%  │     +0.0%
+   technical_process    │  100.0%  │  100.0%  │     +0.0%
+   direct_match         │    0.0%  │    0.0%  │     +0.0%
+
+⏱️  PERFORMANCE TIMING:
+   Average Query Time:
+     Basic Search:       0.308s
+     Cohere Reranked:    0.609s
+     Rerank Overhead:    +97.5%
+
+💰 COST ANALYSIS:
+   Total Embedding Tokens: 0
+   Tokens per Query: 0.0
+   Total Queries: 42
+   OpenAI Embedding Cost: $0.0000
+   Cohere Rerank Cost: $0.0420
+   Total Cost: $0.0420
+
+🏆 FINAL VERDICT:
+   🤝 TIE - Similar performance
+      ⚖️  Choose based on speed vs accuracy needs
+
+📝 RECOMMENDATION:
+   🔄 Test both approaches with your specific use case
+
+
